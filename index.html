@@ -211,7 +211,7 @@
 </head>
 <body class="antialiased selection:bg-primary selection:text-black pb-20 md:pb-0">
 
-    <div class="bg-secondary text-white py-2.5 px-4 text-[11px] sm:text-xs md:text-sm tracking-wide relative z-50">
+    <div class="bg-secondary text-white py-2.5 px-3 text-[11px] sm:text-xs md:text-sm tracking-wide relative z-50">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <div class="hidden md:flex items-center gap-2 text-primary font-bold">
                 <i class="fa-solid fa-crown text-gold"></i>
@@ -221,50 +221,52 @@
                 <span class="inline-block animate-pulse text-primary"><i class="fa-solid fa-sparkles"></i></span>
                 <span>عرض حصري: توصيل مجاني + جرب قبل الدفع!</span>
             </div>
-            <div class="hidden lg:flex items-center gap-3">
-                <span class="bg-white/10 px-4 py-1 rounded-full border border-white/10 font-bold text-xs">ضمان ثبات 48 ساعة</span>
+            <div class="hidden lg:flex items-center gap-2">
+                <span class="bg-white/10 px-3 py-1 rounded-full border border-white/10 font-bold text-xs">ضمان ثبات 48 ساعة</span>
             </div>
         </div>
     </div>
 
     <header id="siteHeader" class="sticky top-0 z-40 bg-white/80 backdrop-blur-xl border-b border-gray-100 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-3 sm:px-5 lg:px-6 py-3 sm:py-3 flex items-center justify-between">
             <!-- Logo -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-secondary flex items-center justify-center shadow-md group-hover:bg-primary transition-colors duration-300">
-                    <img src="https://api.iconify.design/mdi:perfume.svg?color=white" alt="icon" class="w-6 h-6 group-hover:filter-invert transition duration-300">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-secondary flex items-center justify-center shadow-md group-hover:bg-primary transition-colors duration-300">
+                    <img src="https://api.iconify.design/mdi:perfume.svg?color=white" alt="icon" class="w-5 h-5 group-hover:filter-invert transition duration-300">
                 </div>
                 <div>
-                    <span class="text-xl sm:text-2xl font-black font-serif text-secondary tracking-[0.1em] block leading-none">L'ÉLÉGANCE</span>
+                    <span class="text-lg sm:text-xl font-black font-serif text-secondary tracking-[0.1em] block leading-none">L'ÉLÉGANCE</span>
                     <span class="block text-[9px] sm:text-[10px] text-gray-500 tracking-[0.3em] font-bold uppercase mt-1">Haute Parfumerie</span>
                 </div>
             </a>
 
             <!-- Desktop Nav -->
-            <nav class="hidden md:flex items-center gap-10 font-bold text-sm text-gray-600">
+            <nav class="hidden md:flex items-center gap-6 font-bold text-sm text-gray-600">
                 <a href="#showcase" class="hover:text-secondary transition-colors flex items-center gap-2 py-2 border-b-2 border-transparent hover:border-primary">التشكيلة</a>
                 <a href="#reviews" class="hover:text-secondary transition-colors flex items-center gap-2 py-2 border-b-2 border-transparent hover:border-primary">آراء العملاء</a>
                 <a href="#faq" class="hover:text-secondary transition-colors flex items-center gap-2 py-2 border-b-2 border-transparent hover:border-primary">الأسئلة الشائعة</a>
             </nav>
 
             <!-- Actions -->
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-2">
                 <!-- Mobile Cart Btn -->
-                <button onclick="document.getElementById('order-form').scrollIntoView({behavior:'smooth'})" aria-label="عرض السلة" class="relative w-10 h-10 sm:hidden rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-secondary hover:bg-gray-100 transition">
+                <button onclick="document.getElementById('order-form').scrollIntoView({behavior:'smooth'})" aria-label="عرض السلة" class="relative w-9 h-9 sm:hidden rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-secondary hover:bg-gray-100 transition">
                     <i class="fa-solid fa-bag-shopping text-sm"></i>
                     <span id="header-cart-badge" class="cart-badge bg-primary text-secondary hidden">0</span>
                 </button>
 
                 <!-- Desktop CTA -->
-                <a href="#order-form" class="hidden sm:inline-flex items-center gap-3 bg-secondary hover:bg-black text-white font-bold px-6 py-3 rounded-full transition-all shadow-lg hover:shadow-xl text-sm group relative overflow-hidden">
+                <a href="#order-form" class="hidden sm:inline-flex items-center gap-2 bg-secondary hover:bg-black text-white font-bold px-5 py-3 rounded-full transition-all shadow-lg hover:shadow-xl text-sm group relative">
+                    <div class="absolute inset-0 rounded-full overflow-hidden">
+                        <div class="absolute inset-0 w-0 bg-primary/20 transition-all duration-300 ease-out group-hover:w-full"></div>
+                    </div>
                     <span class="relative z-10">اطلب الآن</span>
                     <i class="fa-solid fa-arrow-left-long text-primary relative z-10 group-hover:-translate-x-2 transition-transform"></i>
-                    <span id="header-cart-badge-desktop" class="cart-badge bg-primary text-secondary border-secondary hidden z-10">0</span>
-                    <div class="absolute inset-0 w-0 bg-primary/20 transition-all duration-300 ease-out group-hover:w-full z-0"></div>
+                    <span id="header-cart-badge-desktop" class="cart-badge bg-primary text-secondary border-white hidden z-20">0</span>
                 </a>
 
                 <!-- Mobile Menu Toggle -->
-                <button onclick="toggleMobileMenu()" id="mobileMenuBtn" class="md:hidden w-10 h-10 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-secondary hover:bg-gray-100 transition">
+                <button onclick="toggleMobileMenu()" id="mobileMenuBtn" class="md:hidden w-9 h-9 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-secondary hover:bg-gray-100 transition">
                     <i class="fa-solid fa-bars-staggered text-sm"></i>
                 </button>
             </div>
@@ -274,28 +276,28 @@
     <div id="mobileMenu" class="fixed inset-0 z-50 hidden opacity-0 invisible">
         <div class="absolute inset-0 bg-secondary/60 backdrop-blur-sm transition-opacity" onclick="toggleMobileMenu()"></div>
         <div id="mobileMenuPanel" class="absolute top-0 right-0 h-full w-[80%] max-w-sm bg-white shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300 ease-in-out">
-            <div class="p-6 flex items-center justify-between border-b border-gray-100">
-                <span class="text-xl font-black font-serif text-secondary">L'ÉLÉGANCE</span>
-                <button onclick="toggleMobileMenu()" class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-secondary hover:bg-gray-200 transition">
-                    <i class="fa-solid fa-xmark text-lg"></i>
+            <div class="p-5 flex items-center justify-between border-b border-gray-100">
+                <span class="text-lg font-black font-serif text-secondary">L'ÉLÉGANCE</span>
+                <button onclick="toggleMobileMenu()" class="w-9 h-9 rounded-full bg-gray-50 flex items-center justify-center text-secondary hover:bg-gray-200 transition">
+                    <i class="fa-solid fa-xmark text-base"></i>
                 </button>
             </div>
-            <div class="p-6 flex flex-col gap-4">
-                <a href="#showcase" onclick="toggleMobileMenu()" class="flex items-center justify-between p-4 rounded-2xl bg-gray-50 hover:bg-primary/10 font-bold text-secondary transition">
-                    <span class="flex items-center gap-3"><i class="fa-solid fa-gem text-primary"></i> التشكيلة</span>
+            <div class="p-5 flex flex-col gap-3">
+                <a href="#showcase" onclick="toggleMobileMenu()" class="flex items-center justify-between p-3 rounded-2xl bg-gray-50 hover:bg-primary/10 font-bold text-secondary transition">
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-gem text-primary"></i> التشكيلة</span>
                     <i class="fa-solid fa-chevron-left text-gray-400 text-xs"></i>
                 </a>
-                <a href="#reviews" onclick="toggleMobileMenu()" class="flex items-center justify-between p-4 rounded-2xl bg-gray-50 hover:bg-primary/10 font-bold text-secondary transition">
-                    <span class="flex items-center gap-3"><i class="fa-solid fa-star text-primary"></i> الآراء</span>
+                <a href="#reviews" onclick="toggleMobileMenu()" class="flex items-center justify-between p-3 rounded-2xl bg-gray-50 hover:bg-primary/10 font-bold text-secondary transition">
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-star text-primary"></i> الآراء</span>
                     <i class="fa-solid fa-chevron-left text-gray-400 text-xs"></i>
                 </a>
-                <a href="#faq" onclick="toggleMobileMenu()" class="flex items-center justify-between p-4 rounded-2xl bg-gray-50 hover:bg-primary/10 font-bold text-secondary transition">
-                    <span class="flex items-center gap-3"><i class="fa-solid fa-circle-question text-primary"></i> المساعدة</span>
+                <a href="#faq" onclick="toggleMobileMenu()" class="flex items-center justify-between p-3 rounded-2xl bg-gray-50 hover:bg-primary/10 font-bold text-secondary transition">
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-circle-question text-primary"></i> المساعدة</span>
                     <i class="fa-solid fa-chevron-left text-gray-400 text-xs"></i>
                 </a>
             </div>
-            <div class="mt-auto p-6 bg-gray-50">
-                <a href="#order-form" onclick="toggleMobileMenu()" class="w-full flex items-center justify-center gap-2 bg-secondary text-white font-bold py-4 rounded-xl shadow-lg">
+            <div class="mt-auto p-5 bg-gray-50">
+                <a href="#order-form" onclick="toggleMobileMenu()" class="w-full flex items-center justify-center gap-2 bg-secondary text-white font-bold py-3 rounded-xl shadow-lg">
                     اطلب الآن <i class="fa-solid fa-arrow-left-long text-primary"></i>
                 </a>
             </div>
@@ -308,26 +310,26 @@
             <div class="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-secondary/30"></div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-20 pb-24 md:py-0 flex flex-col lg:flex-row items-center gap-12">
+        <div class="max-w-7xl mx-auto px-3 sm:px-5 lg:px-6 relative z-30 w-full py-10 md:py-10 flex flex-col lg:flex-row items-center gap-8">
             
-            <div class="lg:w-1/2 space-y-8 text-center lg:text-right reveal-on-scroll">
-                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2 rounded-full text-xs sm:text-sm text-white font-bold shadow-lg">
+            <div class="lg:w-1/2 space-y-5 text-center lg:text-right reveal-on-scroll">
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full text-xs sm:text-sm text-white font-bold shadow-lg">
                     <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
                     <span>المجموعة الحصرية 2026</span>
                 </div>
 
-                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black text-white leading-[1.1] font-serif">
+                <h1 class="text-2xl sm:text-3xl lg:text-5xl font-black text-white leading-[1.1] font-serif">
                     عبقٌ يفيض بالأناقة <br>
                     <span class="shimmer-text block mt-2">وحضورٌ لا يُنسى</span>
                 </h1>
 
-                <p class="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed max-w-xl mx-auto lg:mx-0 font-medium">
+                <p class="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 font-medium">
                     تجربة عطرية استثنائية بمعايير فرنسية. تركيز عالي ينبض بالجاذبية وثبات يدوم. <span class="text-primary font-bold bg-primary/10 px-2 py-1 rounded">جرب عطرك أولاً، وادفع لاحقاً.</span>
                 </p>
 
                 <!-- Trust Indicators -->
-                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-2">
-                    <div class="flex items-center gap-3">
+                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                    <div class="flex items-center gap-2">
                         <div class="flex text-gold text-sm drop-shadow-md">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
@@ -339,12 +341,12 @@
                 </div>
 
                 <!-- CTAs -->
-                <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
-                    <a href="#order-form" class="bg-primary hover:bg-primaryDark text-secondary text-lg font-bold py-4 px-8 rounded-full shadow-[0_0_20px_rgba(232,180,184,0.4)] transform hover:-translate-y-1 transition duration-300 flex items-center justify-center gap-3 w-full sm:w-auto">
+                <div class="flex flex-col sm:flex-row gap-3 pt-4 justify-center lg:justify-start">
+                    <a href="#order-form" class="bg-primary hover:bg-primaryDark text-secondary text-base font-bold py-3 px-6 rounded-full shadow-[0_0_20px_rgba(232,180,184,0.4)] transform hover:-translate-y-1 transition duration-300 flex items-center justify-center gap-2 w-full sm:w-auto">
                         <span>اطلب عرض اليوم</span>
                         <i class="fa-solid fa-bag-shopping"></i>
                     </a>
-                    <a href="#showcase" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white text-lg font-bold py-4 px-8 rounded-full transition transform hover:-translate-y-1 flex items-center justify-center gap-3 w-full sm:w-auto">
+                    <a href="#showcase" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white text-base font-bold py-3 px-6 rounded-full transition transform hover:-translate-y-1 flex items-center justify-center gap-2 w-full sm:w-auto">
                         <span>اكتشف التشكيلة</span>
                         <i class="fa-solid fa-arrow-down"></i>
                     </a>
@@ -352,132 +354,118 @@
             </div>
 
             <!-- Floating Product Images (3 Images: Bleu Intense, Rose Impérial, Golden Amber) -->
-            <div class="hidden lg:block lg:w-1/2 relative h-[520px] reveal-on-scroll" style="transition-delay: 200ms;">
+            <div class="hidden lg:block lg:w-1/2 relative h-[600px] reveal-on-scroll" style="transition-delay: 200ms;">
                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/30 rounded-full blur-[100px]"></div>
 
                 <!-- Image 1: Bleu Intense -->
                 <img src="https://images.unsplash.com/photo-1615160460366-2c9a41771b51?auto=format&fit=crop&q=80&w=500"
                      alt="Bleu Intense"
-                     class="absolute w-48 h-72 object-cover rounded-[2rem] shadow-2xl border border-white/20 floating-img"
-                     style="--rot: -10deg; top: 5%; right: 32%; z-index: 10;">
+                     class="absolute w-52 h-80 object-cover rounded-[2rem] shadow-2xl border border-white/20 floating-img"
+                     style="--rot: -10deg; top: 4%; right: 42%; z-index: 10;">
 
                 <!-- Image 2: Rose Impérial -->
                 <img src="https://images.unsplash.com/photo-1619352704218-ab07491b9353?auto=format&fit=crop&q=80&w=500"
                      alt="Rose Impérial"
-                     class="absolute w-56 h-80 object-cover rounded-[2.5rem] shadow-[0_30px_60px_rgba(0,0,0,0.5)] border-2 border-white/30 floating-img"
-                     style="--rot: 6deg; top: 15%; right: 8%; z-index: 20; animation-delay: -3.5s;">
+                     class="absolute w-60 h-96 object-cover rounded-[2rem] shadow-[0_30px_60px_rgba(0,0,0,0.5)] border-2 border-white/30 floating-img"
+                     style="--rot: 6deg; top: 16%; right: 0%; z-index: 20; animation-delay: -3.5s;">
 
                 <!-- Image 3: Golden Amber -->
                 <img src="https://images.unsplash.com/photo-1591892212776-a09de24dbe84?auto=format&fit=crop&q=80&w=500"
                      alt="Golden Amber"
-                     class="absolute w-44 h-68 object-cover rounded-[2rem] shadow-2xl border border-white/20 floating-img"
-                     style="--rot: -4deg; top: 40%; right: 22%; z-index: 30; animation-delay: -1.8s;">
+                     class="absolute w-48 h-72 object-cover rounded-[2rem] shadow-2xl border border-white/20 floating-img"
+                     style="--rot: -4deg; top: 44%; right: 26%; z-index: 15; animation-delay: -1.8s;">
             </div>
         </div>
-        
-        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20 translate-y-[1px]">
-            <svg class="block w-full h-[50px] md:h-[100px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,120 C150,60 350,0 600,0 C850,0 1050,60 1200,120 Z" fill="#FDFBFB"></path>
+
+        <!-- Wave Transition -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0 translate-y-[1px] pointer-events-none">
+            <svg class="block w-full h-[60px] sm:h-[90px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,64 C200,110 400,10 600,50 C800,90 1000,20 1200,64 L1200,120 L0,120 Z" fill="#FDFBFB"></path>
             </svg>
         </div>
+
     </section>
 
-    <div class="relative z-30 -mt-8 sm:-mt-16 mb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8">
-            <div class="glass-panel bg-white/80 p-6 rounded-3xl shadow-luxury flex items-center gap-5 hover:-translate-y-2 transition duration-400 group reveal-on-scroll" style="transition-delay: 100ms;">
-                <div class="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center text-primary text-2xl shrink-0 group-hover:scale-110 transition-transform">
+    <div class="relative z-30 mt-6 sm:mt-8 mb-8 max-w-7xl mx-auto px-3 sm:px-5 lg:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            <div class="glass-panel bg-white/80 p-5 rounded-3xl shadow-luxury flex items-center gap-4 hover:-translate-y-2 transition duration-400 group reveal-on-scroll" style="transition-delay: 100ms;">
+                <div class="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center text-primary text-xl shrink-0 group-hover:scale-110 transition-transform">
                     <i class="fa-solid fa-box-open"></i>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg text-secondary mb-1">تأكد قبل الدفع</h3>
+                    <h3 class="font-bold text-base text-secondary mb-1">تأكد قبل الدفع</h3>
                     <p class="text-sm text-gray-500 leading-relaxed">افتح العلبة واختبر الرائحة أولاً، لا تدفع إلا إذا اقتنعت.</p>
                 </div>
             </div>
-            <div class="glass-panel bg-white/80 p-6 rounded-3xl shadow-luxury flex items-center gap-5 hover:-translate-y-2 transition duration-400 group reveal-on-scroll" style="transition-delay: 200ms;">
-                <div class="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center text-primary text-2xl shrink-0 group-hover:scale-110 transition-transform">
+            <div class="glass-panel bg-white/80 p-5 rounded-3xl shadow-luxury flex items-center gap-4 hover:-translate-y-2 transition duration-400 group reveal-on-scroll" style="transition-delay: 200ms;">
+                <div class="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center text-primary text-xl shrink-0 group-hover:scale-110 transition-transform">
                     <i class="fa-solid fa-truck-fast"></i>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg text-secondary mb-1">توصيل مجاني ومضمون</h3>
+                    <h3 class="font-bold text-base text-secondary mb-1">توصيل مجاني ومضمون</h3>
                     <p class="text-sm text-gray-500 leading-relaxed">شحن سريع ومجاني لجميع المدن المغربية خلال 48 ساعة.</p>
                 </div>
             </div>
-            <div class="glass-panel bg-white/80 p-6 rounded-3xl shadow-luxury flex items-center gap-5 hover:-translate-y-2 transition duration-400 group reveal-on-scroll" style="transition-delay: 300ms;">
-                <div class="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center text-primary text-2xl shrink-0 group-hover:scale-110 transition-transform">
+            <div class="glass-panel bg-white/80 p-5 rounded-3xl shadow-luxury flex items-center gap-4 hover:-translate-y-2 transition duration-400 group reveal-on-scroll" style="transition-delay: 300ms;">
+                <div class="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center text-primary text-xl shrink-0 group-hover:scale-110 transition-transform">
                     <i class="fa-solid fa-droplet"></i>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg text-secondary mb-1">ثبات خيالي للرائحة</h3>
+                    <h3 class="font-bold text-base text-secondary mb-1">ثبات خيالي للرائحة</h3>
                     <p class="text-sm text-gray-500 leading-relaxed">زيوت عطرية فرنسية مركزة تضمن لك ثباتاً يدوم طويلاً.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <section id="showcase" class="py-16 sm:py-24 bg-surface relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="showcase" class="py-8 sm:py-8 bg-surface relative">
+        <div class="max-w-7xl mx-auto px-3 sm:px-5 lg:px-6">
             
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4 reveal-on-scroll">
-                <span class="text-primary font-bold tracking-[0.2em] text-xs sm:text-sm uppercase bg-primary/10 px-4 py-1.5 rounded-full">Notre Collection</span>
-                <h2 class="text-3xl sm:text-5xl font-black font-serif text-secondary mt-4">تشكيلة العطور الملكية</h2>
+            <div class="text-center max-w-3xl mx-auto mb-8 space-y-3 reveal-on-scroll">
+                <span class="text-primary font-bold tracking-[0.2em] text-xs sm:text-sm uppercase bg-primary/10 px-3 py-1.5 rounded-full">Notre Collection</span>
+                <h2 class="text-2xl sm:text-3xl font-black font-serif text-secondary mt-3">تشكيلة العطور الملكية</h2>
                 <div class="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto rounded-full"></div>
-                <p class="text-gray-500 text-base sm:text-lg mt-6">
+                <p class="text-gray-500 text-sm sm:text-base mt-6">
                     انتقِ عطرك المفضل الآن. اضغط على زر الإضافة لاختياره ضمن عرض اليوم الحصري في استمارة الطلب بالأسفل.
                 </p>
 
                 <!-- Filters -->
-                <div class="flex flex-wrap justify-center gap-3 pt-6 w-full" id="catalog-tabs">
-                    <button onclick="filterCatalog('all', this)" class="tab-btn active bg-secondary text-white font-bold text-sm px-6 py-2.5 rounded-full transition shadow-md border-2 border-secondary">
+                <div class="flex flex-wrap justify-center gap-2 pt-6 w-full" id="catalog-tabs">
+                    <button onclick="filterCatalog('all', this)" class="tab-btn active bg-secondary text-white font-bold text-sm px-5 py-2.5 rounded-full transition shadow-md border-2 border-secondary">
                         الكل
                     </button>
-                    <button onclick="filterCatalog('women', this)" class="tab-btn bg-white text-gray-500 hover:text-secondary hover:border-secondary font-bold text-sm px-6 py-2.5 rounded-full transition border-2 border-gray-200">
+                    <button onclick="filterCatalog('women', this)" class="tab-btn bg-white text-gray-500 hover:text-secondary hover:border-secondary font-bold text-sm px-5 py-2.5 rounded-full transition border-2 border-gray-200">
                         نسائي <i class="fa-solid fa-venus ml-1"></i>
                     </button>
-                    <button onclick="filterCatalog('men', this)" class="tab-btn bg-white text-gray-500 hover:text-secondary hover:border-secondary font-bold text-sm px-6 py-2.5 rounded-full transition border-2 border-gray-200">
+                    <button onclick="filterCatalog('men', this)" class="tab-btn bg-white text-gray-500 hover:text-secondary hover:border-secondary font-bold text-sm px-5 py-2.5 rounded-full transition border-2 border-gray-200">
                         رجالي <i class="fa-solid fa-mars ml-1"></i>
                     </button>
-                    <button onclick="filterCatalog('oriental', this)" class="tab-btn bg-white text-gray-500 hover:text-secondary hover:border-secondary font-bold text-sm px-6 py-2.5 rounded-full transition border-2 border-gray-200">
+                    <button onclick="filterCatalog('oriental', this)" class="tab-btn bg-white text-gray-500 hover:text-secondary hover:border-secondary font-bold text-sm px-5 py-2.5 rounded-full transition border-2 border-gray-200">
                         عود وشرقي <i class="fa-solid fa-gem ml-1 text-gold"></i>
                     </button>
                 </div>
             </div>
 
             <!-- Product Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8" id="perfume-grid">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" id="perfume-grid">
                 
                 <!-- Product 1 -->
-                <div class="perfume-card product-item oriental bg-white rounded-[2rem] border border-gray-100 p-3 shadow-sm hover:shadow-luxury transition-all duration-400 group relative flex flex-col reveal-on-scroll" id="card-royal">
-                    <div class="absolute top-6 right-6 z-10 flex flex-col gap-2">
-                        <span class="bg-secondary text-white font-bold text-[10px] px-3 py-1.5 rounded-full uppercase tracking-widest shadow-md">الأكثر مبيعاً</span>
+                <div class="perfume-card product-item oriental bg-white rounded-[1.25rem] border border-gray-100 p-3 shadow-sm hover:shadow-luxury hover:border-primary/30 hover:-translate-y-1.5 transition-all duration-400 group relative flex flex-col reveal-on-scroll" id="card-royal">
+                    <div class="absolute top-5 right-5 z-10 flex flex-col gap-2">
+                        <span class="bg-secondary/90 backdrop-blur-md text-white font-bold text-[11px] px-3.5 py-2 rounded-full uppercase tracking-widest shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-fire text-primary text-[10px]"></i> الأكثر مبيعاً</span>
                     </div>
                     
-                    <div class="h-64 rounded-3xl relative overflow-hidden cursor-pointer img-hover-zoom bg-gray-50" onclick="openModal('ROYAL VELVET', 'عود كمبودي معتق مع نفحات من البخور الملكي وأخشاب الصندل لطلة مهيبة.', '48+ ساعة', '149', 'https://images.unsplash.com/photo-1598634222670-87c5f558119c?auto=format&fit=crop&q=80&w=500', 'شرقي - عود', 'العود، البخور، خشب الصندل')">
+                    <div class="h-56 sm:h-64 rounded-[1.25rem] relative overflow-hidden cursor-pointer img-hover-zoom bg-gray-50" onclick="openModal('ROYAL VELVET', 'عود كمبودي معتق مع نفحات من البخور الملكي وأخشاب الصندل لطلة مهيبة.', '48+ ساعة', '149', 'https://images.unsplash.com/photo-1598634222670-87c5f558119c?auto=format&fit=crop&q=80&w=500', 'شرقي - عود', 'العود، البخور، خشب الصندل', '5')">
                         <img src="https://images.unsplash.com/photo-1598634222670-87c5f558119c?auto=format&fit=crop&q=80&w=500" loading="lazy" alt="Royal Velvet" class="absolute inset-0 w-full h-full object-cover">
                         <div class="absolute inset-0 bg-secondary/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-[2px]">
-                            <span class="bg-white/90 text-secondary text-sm font-bold px-5 py-2.5 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">نظرة سريعة</span>
+                            <span class="bg-white/90 text-secondary text-sm font-bold px-4 py-2.5 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">نظرة سريعة</span>
                         </div>
                     </div>
 
-                    <div class="p-4 pt-5 flex-1 flex flex-col">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-[11px] text-gray-400 font-bold uppercase tracking-wider">شرقي - عود</span>
-                            <span class="flex items-center gap-1 text-gold text-[10px]"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
-                        </div>
-                        <h3 class="text-xl font-black font-serif text-secondary mb-1 line-clamp-1">ROYAL VELVET</h3>
-                        <p class="text-gray-500 text-xs leading-relaxed line-clamp-2 mb-3">عود كمبودي معتق بلمسات البخور الملكي لأصحاب الذوق الرفيع.</p>
-                        
-                        <div class="bg-surface rounded-xl p-2.5 mb-4 space-y-1.5 border border-gray-100 text-[11px]">
-                            <div class="flex items-center justify-between text-gray-600">
-                                <span class="font-bold text-gray-400">المكونات:</span>
-                                <span class="font-bold text-secondary truncate max-w-[140px]">العود، البخور، الصندل</span>
-                            </div>
-                            <div class="flex items-center justify-between text-gray-600">
-                                <span class="font-bold text-gray-400">الثبات:</span>
-                                <span class="font-bold text-primaryDark flex items-center gap-1"><i class="fa-solid fa-clock text-[10px]"></i> 48+ ساعة</span>
-                            </div>
-                        </div>
+                    <div class="px-1 pt-5 pb-1 flex-1 flex flex-col">
+                        <h3 onclick="openModal('ROYAL VELVET', 'عود كمبودي معتق مع نفحات من البخور الملكي وأخشاب الصندل لطلة مهيبة.', '48+ ساعة', '149', 'https://images.unsplash.com/photo-1598634222670-87c5f558119c?auto=format&fit=crop&q=80&w=500', 'شرقي - عود', 'العود، البخور، خشب الصندل', '5')" class="text-xl font-black font-serif text-secondary mb-4 leading-tight tracking-tight line-clamp-1 cursor-pointer hover:text-primaryDark transition-colors">ROYAL VELVET</h3>
 
-                        <div class="mt-auto flex items-center justify-between pt-3 border-t border-gray-50">
+                        <div class="mt-auto flex items-center flex-wrap justify-between gap-2 pt-3 border-t border-gray-50">
                             <div class="flex flex-col">
                                 <div class="flex items-baseline gap-1.5">
                                     <span class="text-xl font-black text-secondary leading-none">149</span>
@@ -485,46 +473,31 @@
                                     <span class="line-through text-xs text-gray-400">250 د.م</span>
                                 </div>
                             </div>
-                            <button onclick="togglePerfumeSelection('ROYAL VELVET', 'card-royal', this)" class="w-12 h-12 rounded-full bg-secondary text-white hover:bg-primary hover:text-secondary flex items-center justify-center transition-colors shadow-md group-hover:scale-105 select-btn">
-                                <i class="fa-solid fa-plus"></i>
+                            <button onclick="togglePerfumeSelection('ROYAL VELVET', 'card-royal', this)" class="h-10 pl-4 pr-3.5 rounded-full bg-secondary text-white hover:bg-primary hover:text-secondary flex items-center justify-center gap-1.5 transition-all shadow-md group-hover:scale-110 select-btn shrink-0">
+                                <i class="fa-solid fa-plus text-xs"></i>
+                                <span class="text-xs font-bold">اطلب الآن</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Product 2 -->
-                <div class="perfume-card product-item women bg-white rounded-[2rem] border border-gray-100 p-3 shadow-sm hover:shadow-luxury transition-all duration-400 group relative flex flex-col reveal-on-scroll" id="card-rose">
-                    <div class="absolute top-6 right-6 z-10">
-                        <span class="bg-primary/20 backdrop-blur-md text-secondary border border-primary/30 font-bold text-[10px] px-3 py-1.5 rounded-full uppercase tracking-widest">نسائي</span>
+                <div class="perfume-card product-item women bg-white rounded-[1.25rem] border border-gray-100 p-3 shadow-sm hover:shadow-luxury hover:border-primary/30 hover:-translate-y-1.5 transition-all duration-400 group relative flex flex-col reveal-on-scroll" id="card-rose">
+                    <div class="absolute top-5 right-5 z-10">
+                        <span class="bg-white/85 backdrop-blur-md text-secondary border border-white/60 font-bold text-[11px] px-3.5 py-2 rounded-full uppercase tracking-widest shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-venus text-primary text-[10px]"></i> نسائي</span>
                     </div>
 
-                    <div class="h-64 rounded-3xl relative overflow-hidden cursor-pointer img-hover-zoom bg-gray-50" onclick="openModal('ROSE IMPÉRIAL', 'مزيج أنثوي مذهل من الورد التركي والياسمين مع الفانيليا الدافئة.', '36+ ساعة', '149', 'https://images.unsplash.com/photo-1619352704218-ab07491b9353?auto=format&fit=crop&q=80&w=500', 'زهري - ناعم', 'الورد التركي، الياسمين، الفانيليا')">
+                    <div class="h-56 sm:h-64 rounded-[1.25rem] relative overflow-hidden cursor-pointer img-hover-zoom bg-gray-50" onclick="openModal('ROSE IMPÉRIAL', 'مزيج أنثوي مذهل من الورد التركي والياسمين مع الفانيليا الدافئة.', '36+ ساعة', '149', 'https://images.unsplash.com/photo-1619352704218-ab07491b9353?auto=format&fit=crop&q=80&w=500', 'زهري - ناعم', 'الورد التركي، الياسمين، الفانيليا', '4.5')">
                         <img src="https://images.unsplash.com/photo-1619352704218-ab07491b9353?auto=format&fit=crop&q=80&w=500" loading="lazy" alt="Rose Imperial" class="absolute inset-0 w-full h-full object-cover">
                         <div class="absolute inset-0 bg-secondary/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-[2px]">
-                            <span class="bg-white/90 text-secondary text-sm font-bold px-5 py-2.5 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">نظرة سريعة</span>
+                            <span class="bg-white/90 text-secondary text-sm font-bold px-4 py-2.5 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">نظرة سريعة</span>
                         </div>
                     </div>
 
-                    <div class="p-4 pt-5 flex-1 flex flex-col">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-[11px] text-gray-400 font-bold uppercase tracking-wider">زهري - ناعم</span>
-                            <span class="flex items-center gap-1 text-gold text-[10px]"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span>
-                        </div>
-                        <h3 class="text-xl font-black font-serif text-secondary mb-1 line-clamp-1">ROSE IMPÉRIAL</h3>
-                        <p class="text-gray-500 text-xs leading-relaxed line-clamp-2 mb-3">الورد التركي والياسمين مع نفحات الفانيليا الدافئة الجذابة.</p>
-                        
-                        <div class="bg-surface rounded-xl p-2.5 mb-4 space-y-1.5 border border-gray-100 text-[11px]">
-                            <div class="flex items-center justify-between text-gray-600">
-                                <span class="font-bold text-gray-400">المكونات:</span>
-                                <span class="font-bold text-secondary truncate max-w-[140px]">الورد، الياسمين، الفانيليا</span>
-                            </div>
-                            <div class="flex items-center justify-between text-gray-600">
-                                <span class="font-bold text-gray-400">الثبات:</span>
-                                <span class="font-bold text-primaryDark flex items-center gap-1"><i class="fa-solid fa-clock text-[10px]"></i> 36+ ساعة</span>
-                            </div>
-                        </div>
+                    <div class="px-1 pt-5 pb-1 flex-1 flex flex-col">
+                        <h3 onclick="openModal('ROSE IMPÉRIAL', 'مزيج أنثوي مذهل من الورد التركي والياسمين مع الفانيليا الدافئة.', '36+ ساعة', '149', 'https://images.unsplash.com/photo-1619352704218-ab07491b9353?auto=format&fit=crop&q=80&w=500', 'زهري - ناعم', 'الورد التركي، الياسمين، الفانيليا', '4.5')" class="text-xl font-black font-serif text-secondary mb-4 leading-tight tracking-tight line-clamp-1 cursor-pointer hover:text-primaryDark transition-colors">ROSE IMPÉRIAL</h3>
 
-                        <div class="mt-auto flex items-center justify-between pt-3 border-t border-gray-50">
+                        <div class="mt-auto flex items-center flex-wrap justify-between gap-2 pt-3 border-t border-gray-50">
                             <div class="flex flex-col">
                                 <div class="flex items-baseline gap-1.5">
                                     <span class="text-xl font-black text-secondary leading-none">149</span>
@@ -532,46 +505,31 @@
                                     <span class="line-through text-xs text-gray-400">250 د.م</span>
                                 </div>
                             </div>
-                            <button onclick="togglePerfumeSelection('ROSE IMPÉRIAL', 'card-rose', this)" class="w-12 h-12 rounded-full bg-secondary text-white hover:bg-primary hover:text-secondary flex items-center justify-center transition-colors shadow-md group-hover:scale-105 select-btn">
-                                <i class="fa-solid fa-plus"></i>
+                            <button onclick="togglePerfumeSelection('ROSE IMPÉRIAL', 'card-rose', this)" class="h-10 pl-4 pr-3.5 rounded-full bg-secondary text-white hover:bg-primary hover:text-secondary flex items-center justify-center gap-1.5 transition-all shadow-md group-hover:scale-110 select-btn shrink-0">
+                                <i class="fa-solid fa-plus text-xs"></i>
+                                <span class="text-xs font-bold">اطلب الآن</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Product 3 -->
-                <div class="perfume-card product-item men bg-white rounded-[2rem] border border-gray-100 p-3 shadow-sm hover:shadow-luxury transition-all duration-400 group relative flex flex-col reveal-on-scroll" id="card-bleu">
-                    <div class="absolute top-6 right-6 z-10">
-                        <span class="bg-blue-100 text-blue-800 border border-blue-200 font-bold text-[10px] px-3 py-1.5 rounded-full uppercase tracking-widest">رجالي</span>
+                <div class="perfume-card product-item men bg-white rounded-[1.25rem] border border-gray-100 p-3 shadow-sm hover:shadow-luxury hover:border-primary/30 hover:-translate-y-1.5 transition-all duration-400 group relative flex flex-col reveal-on-scroll" id="card-bleu">
+                    <div class="absolute top-5 right-5 z-10">
+                        <span class="bg-white/85 backdrop-blur-md text-secondary border border-white/60 font-bold text-[11px] px-3.5 py-2 rounded-full uppercase tracking-widest shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-mars text-primary text-[10px]"></i> رجالي</span>
                     </div>
 
-                    <div class="h-64 rounded-3xl relative overflow-hidden cursor-pointer img-hover-zoom bg-gray-50" onclick="openModal('BLEU INTENSE', 'عطر رجالي صارخ يجمع بين حمضيات المتوسط وخشب الأرز.', '48+ ساعة', '149', 'https://images.unsplash.com/photo-1615160460366-2c9a41771b51?auto=format&fit=crop&q=80&w=500', 'خشبي - منعش', 'حمضيات، خشب الأرز، نعناع')">
+                    <div class="h-56 sm:h-64 rounded-[1.25rem] relative overflow-hidden cursor-pointer img-hover-zoom bg-gray-50" onclick="openModal('BLEU INTENSE', 'عطر رجالي صارخ يجمع بين حمضيات المتوسط وخشب الأرز.', '48+ ساعة', '149', 'https://images.unsplash.com/photo-1615160460366-2c9a41771b51?auto=format&fit=crop&q=80&w=500', 'خشبي - منعش', 'حمضيات، خشب الأرز، نعناع', '5')">
                         <img src="https://images.unsplash.com/photo-1615160460366-2c9a41771b51?auto=format&fit=crop&q=80&w=500" loading="lazy" alt="Bleu Intense" class="absolute inset-0 w-full h-full object-cover">
                         <div class="absolute inset-0 bg-secondary/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-[2px]">
-                            <span class="bg-white/90 text-secondary text-sm font-bold px-5 py-2.5 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">نظرة سريعة</span>
+                            <span class="bg-white/90 text-secondary text-sm font-bold px-4 py-2.5 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">نظرة سريعة</span>
                         </div>
                     </div>
 
-                    <div class="p-4 pt-5 flex-1 flex flex-col">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-[11px] text-gray-400 font-bold uppercase tracking-wider">خشبي - منعش</span>
-                            <span class="flex items-center gap-1 text-gold text-[10px]"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
-                        </div>
-                        <h3 class="text-xl font-black font-serif text-secondary mb-1 line-clamp-1">BLEU INTENSE</h3>
-                        <p class="text-gray-500 text-xs leading-relaxed line-clamp-2 mb-3">جاذبية ذكورية صارخة بخلاصة الحمضيات وأخشاب الأرز الفاخرة.</p>
-                        
-                        <div class="bg-surface rounded-xl p-2.5 mb-4 space-y-1.5 border border-gray-100 text-[11px]">
-                            <div class="flex items-center justify-between text-gray-600">
-                                <span class="font-bold text-gray-400">المكونات:</span>
-                                <span class="font-bold text-secondary truncate max-w-[140px]">حمضيات، الأرز، النعناع</span>
-                            </div>
-                            <div class="flex items-center justify-between text-gray-600">
-                                <span class="font-bold text-gray-400">الثبات:</span>
-                                <span class="font-bold text-primaryDark flex items-center gap-1"><i class="fa-solid fa-clock text-[10px]"></i> 48+ ساعة</span>
-                            </div>
-                        </div>
+                    <div class="px-1 pt-5 pb-1 flex-1 flex flex-col">
+                        <h3 onclick="openModal('BLEU INTENSE', 'عطر رجالي صارخ يجمع بين حمضيات المتوسط وخشب الأرز.', '48+ ساعة', '149', 'https://images.unsplash.com/photo-1615160460366-2c9a41771b51?auto=format&fit=crop&q=80&w=500', 'خشبي - منعش', 'حمضيات، خشب الأرز، نعناع', '5')" class="text-xl font-black font-serif text-secondary mb-4 leading-tight tracking-tight line-clamp-1 cursor-pointer hover:text-primaryDark transition-colors">BLEU INTENSE</h3>
 
-                        <div class="mt-auto flex items-center justify-between pt-3 border-t border-gray-50">
+                        <div class="mt-auto flex items-center flex-wrap justify-between gap-2 pt-3 border-t border-gray-50">
                             <div class="flex flex-col">
                                 <div class="flex items-baseline gap-1.5">
                                     <span class="text-xl font-black text-secondary leading-none">149</span>
@@ -579,46 +537,31 @@
                                     <span class="line-through text-xs text-gray-400">250 د.م</span>
                                 </div>
                             </div>
-                            <button onclick="togglePerfumeSelection('BLEU INTENSE', 'card-bleu', this)" class="w-12 h-12 rounded-full bg-secondary text-white hover:bg-primary hover:text-secondary flex items-center justify-center transition-colors shadow-md group-hover:scale-105 select-btn">
-                                <i class="fa-solid fa-plus"></i>
+                            <button onclick="togglePerfumeSelection('BLEU INTENSE', 'card-bleu', this)" class="h-10 pl-4 pr-3.5 rounded-full bg-secondary text-white hover:bg-primary hover:text-secondary flex items-center justify-center gap-1.5 transition-all shadow-md group-hover:scale-110 select-btn shrink-0">
+                                <i class="fa-solid fa-plus text-xs"></i>
+                                <span class="text-xs font-bold">اطلب الآن</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Product 4 -->
-                <div class="perfume-card product-item oriental women bg-white rounded-[2rem] border border-gray-100 p-3 shadow-sm hover:shadow-luxury transition-all duration-400 group relative flex flex-col reveal-on-scroll" id="card-amber">
-                    <div class="absolute top-6 right-6 z-10">
-                        <span class="bg-gold/20 text-yellow-900 border border-gold/40 font-bold text-[10px] px-3 py-1.5 rounded-full uppercase tracking-widest">إصدار جديد</span>
+                <div class="perfume-card product-item oriental women bg-white rounded-[1.25rem] border border-gray-100 p-3 shadow-sm hover:shadow-luxury hover:border-primary/30 hover:-translate-y-1.5 transition-all duration-400 group relative flex flex-col reveal-on-scroll" id="card-amber">
+                    <div class="absolute top-5 right-5 z-10">
+                        <span class="bg-gold/90 backdrop-blur-md text-white font-bold text-[11px] px-3.5 py-2 rounded-full uppercase tracking-widest shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-sparkles text-[10px]"></i> إصدار جديد</span>
                     </div>
                     
-                    <div class="h-64 rounded-3xl relative overflow-hidden cursor-pointer img-hover-zoom bg-gray-50" onclick="openModal('GOLDEN AMBER', 'دفء الشرق في زجاجة. عنبر ذهبي وفانيليا غنية بلمسة توابل.', '40+ ساعة', '149', 'https://images.unsplash.com/photo-1591892212776-a09de24dbe84?auto=format&fit=crop&q=80&w=500', 'شرقي - حلو', 'العنبر الذهبي، الفانيليا، القرفة')">
+                    <div class="h-56 sm:h-64 rounded-[1.25rem] relative overflow-hidden cursor-pointer img-hover-zoom bg-gray-50" onclick="openModal('GOLDEN AMBER', 'دفء الشرق في زجاجة. عنبر ذهبي وفانيليا غنية بلمسة توابل.', '40+ ساعة', '149', 'https://images.unsplash.com/photo-1591892212776-a09de24dbe84?auto=format&fit=crop&q=80&w=500', 'شرقي - حلو', 'العنبر الذهبي، الفانيليا، القرفة', '5')">
                         <img src="https://images.unsplash.com/photo-1591892212776-a09de24dbe84?auto=format&fit=crop&q=80&w=500" loading="lazy" alt="Golden Amber" class="absolute inset-0 w-full h-full object-cover">
                         <div class="absolute inset-0 bg-secondary/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-[2px]">
-                            <span class="bg-white/90 text-secondary text-sm font-bold px-5 py-2.5 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">نظرة سريعة</span>
+                            <span class="bg-white/90 text-secondary text-sm font-bold px-4 py-2.5 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">نظرة سريعة</span>
                         </div>
                     </div>
 
-                    <div class="p-4 pt-5 flex-1 flex flex-col">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-[11px] text-gray-400 font-bold uppercase tracking-wider">شرقي - حلو</span>
-                            <span class="flex items-center gap-1 text-gold text-[10px]"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
-                        </div>
-                        <h3 class="text-xl font-black font-serif text-secondary mb-1 line-clamp-1">GOLDEN AMBER</h3>
-                        <p class="text-gray-500 text-xs leading-relaxed line-clamp-2 mb-3">مزيج دافئ وساحر من العنبر الخالص وحلاوة الفانيليا الغنية.</p>
-                        
-                        <div class="bg-surface rounded-xl p-2.5 mb-4 space-y-1.5 border border-gray-100 text-[11px]">
-                            <div class="flex items-center justify-between text-gray-600">
-                                <span class="font-bold text-gray-400">المكونات:</span>
-                                <span class="font-bold text-secondary truncate max-w-[140px]">العنبر، الفانيليا، القرفة</span>
-                            </div>
-                            <div class="flex items-center justify-between text-gray-600">
-                                <span class="font-bold text-gray-400">الثبات:</span>
-                                <span class="font-bold text-primaryDark flex items-center gap-1"><i class="fa-solid fa-clock text-[10px]"></i> 40+ ساعة</span>
-                            </div>
-                        </div>
+                    <div class="px-1 pt-5 pb-1 flex-1 flex flex-col">
+                        <h3 onclick="openModal('GOLDEN AMBER', 'دفء الشرق في زجاجة. عنبر ذهبي وفانيليا غنية بلمسة توابل.', '40+ ساعة', '149', 'https://images.unsplash.com/photo-1591892212776-a09de24dbe84?auto=format&fit=crop&q=80&w=500', 'شرقي - حلو', 'العنبر الذهبي، الفانيليا، القرفة', '5')" class="text-xl font-black font-serif text-secondary mb-4 leading-tight tracking-tight line-clamp-1 cursor-pointer hover:text-primaryDark transition-colors">GOLDEN AMBER</h3>
 
-                        <div class="mt-auto flex items-center justify-between pt-3 border-t border-gray-50">
+                        <div class="mt-auto flex items-center flex-wrap justify-between gap-2 pt-3 border-t border-gray-50">
                             <div class="flex flex-col">
                                 <div class="flex items-baseline gap-1.5">
                                     <span class="text-xl font-black text-secondary leading-none">149</span>
@@ -626,8 +569,9 @@
                                     <span class="line-through text-xs text-gray-400">250 د.م</span>
                                 </div>
                             </div>
-                            <button onclick="togglePerfumeSelection('GOLDEN AMBER', 'card-amber', this)" class="w-12 h-12 rounded-full bg-secondary text-white hover:bg-primary hover:text-secondary flex items-center justify-center transition-colors shadow-md group-hover:scale-105 select-btn">
-                                <i class="fa-solid fa-plus"></i>
+                            <button onclick="togglePerfumeSelection('GOLDEN AMBER', 'card-amber', this)" class="h-10 pl-4 pr-3.5 rounded-full bg-secondary text-white hover:bg-primary hover:text-secondary flex items-center justify-center gap-1.5 transition-all shadow-md group-hover:scale-110 select-btn shrink-0">
+                                <i class="fa-solid fa-plus text-xs"></i>
+                                <span class="text-xs font-bold">اطلب الآن</span>
                             </button>
                         </div>
                     </div>
@@ -637,34 +581,34 @@
         </div>
     </section>
 
-    <section id="order-form" class="py-24 bg-white relative overflow-hidden">
+    <section id="order-form" class="py-8 bg-white relative overflow-hidden">
         <div class="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
         <div class="absolute -bottom-[20%] -left-[10%] w-[500px] h-[500px] bg-gold/5 rounded-full blur-[100px] pointer-events-none"></div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
+        <div class="max-w-7xl mx-auto px-3 sm:px-5 lg:px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-8 lg:gap-20 items-start">
                 
                 <!-- Info Column -->
-                <div class="lg:w-5/12 lg:sticky lg:top-28 space-y-8 w-full reveal-on-scroll">
+                <div class="lg:w-5/12 lg:sticky lg:top-28 space-y-5 w-full reveal-on-scroll">
                     <div>
-                        <span class="inline-flex items-center gap-2 bg-green-50 text-green-700 border border-green-200 font-bold text-xs mb-6 px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
+                        <span class="inline-flex items-center gap-2 bg-green-50 text-green-700 border border-green-200 font-bold text-xs mb-4 px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
                             <i class="fa-solid fa-shield-check"></i> الدفع عند الاستلام فقط
                         </span>
-                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-black font-serif mb-6 leading-[1.1] text-secondary">أتمم طلبك <br>بكل سهولة وأمان</h2>
-                        <p class="text-gray-500 text-base lg:text-lg leading-relaxed">
+                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-black font-serif mb-4 leading-[1.1] text-secondary">أتمم طلبك <br>بكل سهولة وأمان</h2>
+                        <p class="text-gray-500 text-sm lg:text-base leading-relaxed">
                             اختر العرض المناسب، املأ بيانات التوصيل، وسنقوم بالباقي. <strong class="text-secondary">لا توجد رسوم خفية</strong>، والدفع يتم يداً بيد مع المندوب بعد التأكد من طلبيتك.
                         </p>
                     </div>
 
                     <!-- Selected Items Summary UI -->
-                    <div class="bg-surface border border-gray-100 rounded-3xl p-6 shadow-sm">
+                    <div class="bg-surface border border-gray-100 rounded-3xl p-5 shadow-sm">
                         <h4 class="text-secondary font-black mb-4 flex items-center justify-between">
                             <span class="flex items-center gap-2"><i class="fa-solid fa-bag-shopping text-primary"></i> سلة اختياراتك</span>
-                            <span class="text-xs bg-gray-200 text-gray-600 px-2 py-1 rounded-md font-bold" id="cart-counter-text">0/2</span>
+                            <span class="text-xs bg-gray-200 text-gray-600 px-2 py-1 rounded-md font-bold" id="cart-counter-text">0/4</span>
                         </h4>
                         
-                        <div id="cart-empty-state" class="text-center py-4 border-2 border-dashed border-gray-200 rounded-2xl">
-                            <i class="fa-solid fa-spray-can text-gray-300 text-2xl mb-2"></i>
+                        <div id="cart-empty-state" class="text-center py-3 border-2 border-dashed border-gray-200 rounded-2xl">
+                            <i class="fa-solid fa-spray-can text-gray-300 text-xl mb-2"></i>
                             <p class="text-gray-400 text-sm font-medium">لم تختر أي عطر بعد.<br><span class="text-xs">اختر من التشكيلة أو سنختار لك أفضل روائحنا.</span></p>
                         </div>
                         
@@ -672,72 +616,72 @@
                     </div>
 
                     <!-- Guarantees -->
-                    <div class="flex items-center gap-6 pt-4 border-t border-gray-100">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fa-solid fa-truck"></i></div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-gray-100">
+                        <div class="flex items-center gap-2">
+                            <div class="w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fa-solid fa-truck"></i></div>
                             <span class="font-bold text-sm text-secondary">توصيل مجاني</span>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fa-solid fa-rotate-left"></i></div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fa-solid fa-rotate-left"></i></div>
                             <span class="font-bold text-sm text-secondary">ضمان الاسترجاع</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Form Column -->
-                <div class="lg:w-7/12 w-full bg-white p-6 sm:p-10 rounded-[2.5rem] shadow-luxury border border-gray-100 reveal-on-scroll">
+                <div class="lg:w-7/12 w-full bg-white p-5 sm:p-8 rounded-[2rem] shadow-luxury border border-gray-100 reveal-on-scroll">
                     
-                    <form id="checkoutForm" onsubmit="handleOrderSubmit(event)" class="space-y-10">
+                    <form id="checkoutForm" onsubmit="handleOrderSubmit(event)" class="space-y-6">
                         
                         <!-- Step 1: Packages -->
                         <div class="space-y-5">
-                            <div class="flex items-center gap-3 mb-2">
-                                <div class="w-8 h-8 rounded-full bg-secondary text-white font-black flex items-center justify-center shadow-md">1</div>
-                                <h3 class="font-black text-secondary text-xl">اختر العرض المناسب لك</h3>
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-7 h-7 rounded-full bg-secondary text-white font-black flex items-center justify-center shadow-md">1</div>
+                                <h3 class="font-black text-secondary text-lg">اختر العرض المناسب لك</h3>
                             </div>
                             
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
                                 <!-- Pack 1 -->
-                                <label id="label-pack1" class="relative flex flex-col cursor-pointer rounded-[1.5rem] border-2 border-gray-100 bg-white p-4 hover:border-gray-300 transition-all duration-300 group" onclick="selectPack('pack1', 149)">
+                                <label id="label-pack1" class="relative flex flex-col cursor-pointer rounded-[1.25rem] border-2 border-gray-100 bg-white p-3 hover:border-gray-300 transition-all duration-300 group" onclick="selectPack('pack1', 149)">
                                     <input type="radio" name="package" value="149" class="sr-only">
                                     <div class="flex justify-between items-start mb-3">
                                         <div>
-                                            <h4 class="font-black text-secondary text-base">عطر واحد</h4>
+                                            <h4 class="font-black text-secondary text-sm">عطر واحد</h4>
                                             <p class="text-gray-500 text-[11px] mt-0.5">100 مل الفاخر</p>
                                         </div>
-                                        <div class="w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center group-[.active-pack]:border-primary group-[.active-pack]:bg-primary transition-colors">
+                                        <div class="w-4 h-4 rounded-full border-2 border-gray-300 flex items-center justify-center group-[.active-pack]:border-primary group-[.active-pack]:bg-primary transition-colors">
                                             <i class="fa-solid fa-check text-white text-[10px] opacity-0 group-[.active-pack]:opacity-100 transition-opacity"></i>
                                         </div>
                                     </div>
                                     <div class="mt-auto pt-3 border-t border-gray-50 flex items-end gap-1.5">
-                                        <span class="font-black text-2xl text-secondary leading-none">149</span>
+                                        <span class="font-black text-xl text-secondary leading-none">149</span>
                                         <span class="text-xs text-gray-500 font-bold mb-0.5">درهم</span>
                                     </div>
                                 </label>
 
                                 <!-- Pack 2 -->
-                                <label id="label-pack2" class="relative flex flex-col cursor-pointer rounded-[1.5rem] border-2 border-gray-100 bg-white p-4 hover:border-gray-300 transition-all duration-300 group" onclick="selectPack('pack2', 249)">
+                                <label id="label-pack2" class="relative flex flex-col cursor-pointer rounded-[1.25rem] border-2 border-gray-100 bg-white p-3 hover:border-gray-300 transition-all duration-300 group" onclick="selectPack('pack2', 249)">
                                     <input type="radio" name="package" value="249" class="sr-only">
                                     <div class="flex justify-between items-start mb-3">
                                         <div>
-                                            <h4 class="font-black text-secondary text-base">باقة عطرين</h4>
+                                            <h4 class="font-black text-secondary text-sm">باقة عطرين</h4>
                                             <p class="text-gray-500 text-[11px] mt-0.5">عطرين 100 مل</p>
                                         </div>
-                                        <div class="w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center group-[.active-pack]:border-primary group-[.active-pack]:bg-primary transition-colors">
+                                        <div class="w-4 h-4 rounded-full border-2 border-gray-300 flex items-center justify-center group-[.active-pack]:border-primary group-[.active-pack]:bg-primary transition-colors">
                                             <i class="fa-solid fa-check text-white text-[10px] opacity-0 group-[.active-pack]:opacity-100 transition-opacity"></i>
                                         </div>
                                     </div>
                                     <div class="mt-auto pt-3 border-t border-gray-50 flex flex-col">
                                         <span class="line-through text-gray-400 text-[10px] font-bold">298 د.م</span>
                                         <div class="flex items-end gap-1.5">
-                                            <span class="font-black text-2xl text-secondary leading-none">249</span>
+                                            <span class="font-black text-xl text-secondary leading-none">249</span>
                                             <span class="text-xs text-gray-500 font-bold mb-0.5">درهم</span>
                                         </div>
                                     </div>
                                 </label>
 
                                 <!-- Pack 3 (Recommended / 4 Perfumes) -->
-                                <label id="label-pack3" class="active-pack relative flex flex-col cursor-pointer rounded-[1.5rem] border-2 border-secondary bg-surface p-4 shadow-lg transform transition-all duration-300 group" onclick="selectPack('pack3', 349)">
+                                <label id="label-pack3" class="active-pack relative flex flex-col cursor-pointer rounded-[1.25rem] border-2 border-secondary bg-surface p-3 shadow-lg transform transition-all duration-300 group" onclick="selectPack('pack3', 349)">
                                     <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-secondary text-[10px] font-black px-3 py-0.5 rounded-full shadow-md w-max z-10 flex items-center gap-1.5">
                                         <span>العرض الملكي</span>
                                         <svg class="w-3.5 h-3.5 text-secondary fill-current" viewBox="0 0 24 24"><path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/></svg>
@@ -746,10 +690,10 @@
                                     
                                     <div class="flex justify-between items-start mb-3 mt-1">
                                         <div>
-                                            <h4 class="font-black text-secondary text-base">باقة 4 عطور</h4>
+                                            <h4 class="font-black text-secondary text-sm">باقة 4 عطور</h4>
                                             <p class="text-gray-600 text-[11px] mt-0.5 font-medium">تشكيلة كاملة + توصيل</p>
                                         </div>
-                                        <div class="w-5 h-5 rounded-full border-2 border-primary bg-primary flex items-center justify-center transition-colors">
+                                        <div class="w-4 h-4 rounded-full border-2 border-primary bg-primary flex items-center justify-center transition-colors">
                                             <i class="fa-solid fa-check text-white text-[10px]"></i>
                                         </div>
                                     </div>
@@ -757,7 +701,7 @@
                                     <div class="mt-auto pt-3 border-t border-gray-200 flex flex-col">
                                         <span class="line-through text-gray-400 text-[10px] font-bold">596 د.م</span>
                                         <div class="flex items-end gap-1.5">
-                                            <span class="font-black text-2xl text-secondary leading-none">349</span>
+                                            <span class="font-black text-xl text-secondary leading-none">349</span>
                                             <span class="text-xs text-secondary font-bold mb-0.5">درهم فقط</span>
                                         </div>
                                     </div>
@@ -767,9 +711,9 @@
 
                         <!-- Step 2: Shipping Form with Floating Labels -->
                         <div class="space-y-6 relative">
-                            <div class="flex items-center gap-3 mb-2">
-                                <div class="w-8 h-8 rounded-full bg-secondary text-white font-black flex items-center justify-center shadow-md">2</div>
-                                <h3 class="font-black text-secondary text-xl">أين نرسل طلبك؟</h3>
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-7 h-7 rounded-full bg-secondary text-white font-black flex items-center justify-center shadow-md">2</div>
+                                <h3 class="font-black text-secondary text-lg">أين نرسل طلبك؟</h3>
                             </div>
                             
                             <div class="space-y-4">
@@ -779,7 +723,7 @@
                                     <span class="field-error-msg" id="err-fullname">الرجاء إدخال اسمك الكامل.</span>
                                 </div>
                                 
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                                     <div class="input-group mb-0">
                                         <input type="tel" id="phone" class="input-peer peer text-right" placeholder=" " dir="ltr" required oninput="clearFieldError('phone')">
                                         <label for="phone" class="label-floating">رقم الهاتف (مثال: 0612345678)</label>
@@ -795,20 +739,20 @@
                             
                             <input type="hidden" id="selected-perfumes-input" name="selected_perfumes">
                             
-                            <div class="bg-gray-50 rounded-2xl p-4 flex items-center justify-between border border-gray-100">
+                            <div class="bg-gray-50 rounded-2xl p-3 flex items-center justify-between border border-gray-100">
                                 <span class="font-bold text-gray-500">المبلغ الإجمالي للدفع:</span>
-                                <span class="font-black text-2xl text-secondary"><span id="form-total-price">299</span> درهم</span>
+                                <span class="font-black text-xl text-secondary"><span id="form-total-price">349</span> درهم</span>
                             </div>
                         </div>
 
                         <!-- Submit Button -->
-                        <button type="submit" id="submit-btn" class="w-full bg-secondary hover:bg-black text-white font-black py-4 sm:py-5 rounded-2xl transition-all shadow-[0_15px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.25)] text-lg flex items-center justify-center gap-3 group relative overflow-hidden">
+                        <button type="submit" id="submit-btn" class="w-full bg-secondary hover:bg-black text-white font-black py-3 sm:py-4 rounded-2xl transition-all shadow-[0_15px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.25)] text-base flex items-center justify-center gap-2 group relative overflow-hidden">
                             <span class="relative z-10">تأكيد الطلب الآن</span>
                             <i class="fa-solid fa-paper-plane relative z-10 text-primary group-hover:translate-x-1 transition-transform"></i>
                             <div class="absolute inset-0 h-full w-0 bg-white/10 transition-all duration-300 ease-out group-hover:w-full z-0"></div>
                         </button>
                         
-                        <p class="text-center text-xs text-gray-400 font-bold mt-4 flex items-center justify-center gap-1.5">
+                        <p class="text-center text-xs text-gray-400 font-bold mt-3 flex items-center justify-center gap-1.5">
                             <i class="fa-solid fa-lock text-green-500"></i> بياناتك مشفرة ومحمية بالكامل
                         </p>
                     </form>
@@ -817,27 +761,27 @@
         </div>
     </section>
 
-    <section id="reviews" class="py-24 bg-surface">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 reveal-on-scroll">
-                <span class="text-primary font-bold tracking-[0.2em] text-xs sm:text-sm uppercase bg-primary/10 px-4 py-1.5 rounded-full">Témoignages</span>
-                <h2 class="text-4xl font-black font-serif text-secondary mt-4 mb-3">آراء زبنائنا الكرام</h2>
-                <div class="flex justify-center items-center gap-1 text-gold text-lg">
+    <section id="reviews" class="py-8 bg-surface">
+        <div class="max-w-7xl mx-auto px-3 sm:px-5 lg:px-6">
+            <div class="text-center mb-8 reveal-on-scroll">
+                <span class="text-primary font-bold tracking-[0.2em] text-xs sm:text-sm uppercase bg-primary/10 px-3 py-1.5 rounded-full">Témoignages</span>
+                <h2 class="text-2xl font-black font-serif text-secondary mt-3 mb-3">آراء زبنائنا الكرام</h2>
+                <div class="flex justify-center items-center gap-1 text-gold text-base">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Review 1 -->
-                <div class="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-luxury transition duration-400 border border-gray-50 relative reveal-on-scroll" style="transition-delay: 100ms;">
-                    <div class="absolute -top-5 right-8 w-10 h-10 bg-primary rounded-full flex items-center justify-center text-secondary shadow-lg">
+                <div class="bg-white p-6 rounded-[2rem] shadow-sm hover:shadow-luxury transition duration-400 border border-gray-50 relative reveal-on-scroll" style="transition-delay: 100ms;">
+                    <div class="absolute -top-5 right-8 w-9 h-9 bg-primary rounded-full flex items-center justify-center text-secondary shadow-lg">
                         <i class="fa-solid fa-quote-right"></i>
                     </div>
                     <p class="text-gray-600 text-sm leading-relaxed mb-8 pt-4">
                         "عطر Bleu Intense خيالي! الثبات ديالو فعلا كيدوم أكثر من يومين. الباكاجينغ فخم بزاف والتوصيل كان سريع فظرف 24 ساعة لمدينة كازا. شكراً لكم."
                     </p>
-                    <div class="flex items-center gap-4 border-t border-gray-50 pt-4">
-                        <div class="w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-xl">أ</div>
+                    <div class="flex items-center gap-3 border-t border-gray-50 pt-4">
+                        <div class="w-10 h-10 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-lg">أ</div>
                         <div>
                             <h4 class="font-black text-secondary text-sm">أمين م.</h4>
                             <span class="text-xs text-green-600 font-bold flex items-center gap-1"><i class="fa-solid fa-circle-check"></i> مشتري مؤكد</span>
@@ -846,15 +790,15 @@
                 </div>
                 
                 <!-- Review 2 -->
-                <div class="bg-secondary p-8 rounded-[2rem] shadow-luxury transition duration-400 relative transform md:-translate-y-4 reveal-on-scroll" style="transition-delay: 200ms;">
-                    <div class="absolute -top-5 right-8 w-10 h-10 bg-white rounded-full flex items-center justify-center text-secondary shadow-lg">
+                <div class="bg-secondary p-6 rounded-[2rem] shadow-luxury transition duration-400 relative transform md:-translate-y-4 reveal-on-scroll" style="transition-delay: 200ms;">
+                    <div class="absolute -top-5 right-8 w-9 h-9 bg-white rounded-full flex items-center justify-center text-secondary shadow-lg">
                         <i class="fa-solid fa-quote-right"></i>
                     </div>
                     <p class="text-gray-300 text-sm leading-relaxed mb-8 pt-4">
                         "خديت عرض العطرين Rose و Amber. الروائح راقية بزاف ومكتدوخش بحال العطور الرخيصة. أحسن حاجة هي أنني تأكدت من الريحة عاد خلصت المندوب."
                     </p>
-                    <div class="flex items-center gap-4 border-t border-gray-700 pt-4">
-                        <div class="w-12 h-12 bg-primary text-secondary rounded-full flex items-center justify-center font-bold text-xl">س</div>
+                    <div class="flex items-center gap-3 border-t border-gray-700 pt-4">
+                        <div class="w-10 h-10 bg-primary text-secondary rounded-full flex items-center justify-center font-bold text-lg">س</div>
                         <div>
                             <h4 class="font-black text-white text-sm">سارة ب.</h4>
                             <span class="text-xs text-primary font-bold flex items-center gap-1"><i class="fa-solid fa-circle-check"></i> مشترية مؤكدة</span>
@@ -863,15 +807,15 @@
                 </div>
 
                 <!-- Review 3 -->
-                <div class="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-luxury transition duration-400 border border-gray-50 relative reveal-on-scroll" style="transition-delay: 300ms;">
-                    <div class="absolute -top-5 right-8 w-10 h-10 bg-primary rounded-full flex items-center justify-center text-secondary shadow-lg">
+                <div class="bg-white p-6 rounded-[2rem] shadow-sm hover:shadow-luxury transition duration-400 border border-gray-50 relative reveal-on-scroll" style="transition-delay: 300ms;">
+                    <div class="absolute -top-5 right-8 w-9 h-9 bg-primary rounded-full flex items-center justify-center text-secondary shadow-lg">
                         <i class="fa-solid fa-quote-right"></i>
                     </div>
                     <p class="text-gray-600 text-sm leading-relaxed mb-8 pt-4">
                         "العود الملكي مستوى آخر ديال الفخامة. ريحة المناسبات الكبيرة والحضور القوي. العطر كيخلي الأثر فالمكان لي كتدخل ليه. أنصح به بشدة."
                     </p>
-                    <div class="flex items-center gap-4 border-t border-gray-50 pt-4">
-                        <div class="w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-xl">ي</div>
+                    <div class="flex items-center gap-3 border-t border-gray-50 pt-4">
+                        <div class="w-10 h-10 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-lg">ي</div>
                         <div>
                             <h4 class="font-black text-secondary text-sm">يوسف خ.</h4>
                             <span class="text-xs text-green-600 font-bold flex items-center gap-1"><i class="fa-solid fa-circle-check"></i> مشتري مؤكد</span>
@@ -882,10 +826,10 @@
         </div>
     </section>
 
-    <section id="faq" class="py-20 bg-white">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" class="py-10 bg-white">
+        <div class="max-w-3xl mx-auto px-3 sm:px-5 lg:px-6">
             <div class="text-center mb-12 reveal-on-scroll">
-                <h2 class="text-3xl sm:text-4xl font-black font-serif text-secondary mb-4">أسئلة متكررة</h2>
+                <h2 class="text-2xl sm:text-2xl font-black font-serif text-secondary mb-4">أسئلة متكررة</h2>
                 <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
             </div>
 
@@ -894,11 +838,11 @@
                 <div class="faq-item group bg-surface border border-gray-100 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-md">
                     <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-right p-5 font-bold text-secondary focus:outline-none">
                         <span>كيف تعمل خدمة "التجربة قبل الدفع"؟</span>
-                        <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary group-[.is-open]:bg-secondary group-[.is-open]:text-white transition-colors shrink-0">
+                        <div class="w-7 h-7 rounded-full bg-white flex items-center justify-center text-primary group-[.is-open]:bg-secondary group-[.is-open]:text-white transition-colors shrink-0">
                             <i class="fa-solid fa-plus transition-transform duration-300 group-[.is-open]:rotate-45 text-sm"></i>
                         </div>
                     </button>
-                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5">
+                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-4">
                         <p class="text-gray-500 text-sm pb-5 leading-relaxed border-t border-gray-100 pt-3">
                             عندما يصلك المندوب، يحق لك فتح الطلبية وتجربة رائحة العطر. إذا أعجبتك وتأكدت من جودتها، تقوم بالدفع. إن لم تناسبك، يمكنك إرجاعها فوراً دون دفع أي مبلغ.
                         </p>
@@ -909,11 +853,11 @@
                 <div class="faq-item group bg-surface border border-gray-100 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-md">
                     <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-right p-5 font-bold text-secondary focus:outline-none">
                         <span>هل العطور تدوم طويلاً فعلاً؟</span>
-                        <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary group-[.is-open]:bg-secondary group-[.is-open]:text-white transition-colors shrink-0">
+                        <div class="w-7 h-7 rounded-full bg-white flex items-center justify-center text-primary group-[.is-open]:bg-secondary group-[.is-open]:text-white transition-colors shrink-0">
                             <i class="fa-solid fa-plus transition-transform duration-300 group-[.is-open]:rotate-45 text-sm"></i>
                         </div>
                     </button>
-                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5">
+                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-4">
                         <p class="text-gray-500 text-sm pb-5 leading-relaxed border-t border-gray-100 pt-3">
                             نعم، نستخدم زيوتاً فرنسية خام بتركيز Extrait de Parfum، مما يضمن ثباتاً يصل إلى 48 ساعة على الملابس.
                         </p>
@@ -924,11 +868,11 @@
                 <div class="faq-item group bg-surface border border-gray-100 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-md">
                     <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-right p-5 font-bold text-secondary focus:outline-none">
                         <span>كم يستغرق التوصيل؟</span>
-                        <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary group-[.is-open]:bg-secondary group-[.is-open]:text-white transition-colors shrink-0">
+                        <div class="w-7 h-7 rounded-full bg-white flex items-center justify-center text-primary group-[.is-open]:bg-secondary group-[.is-open]:text-white transition-colors shrink-0">
                             <i class="fa-solid fa-plus transition-transform duration-300 group-[.is-open]:rotate-45 text-sm"></i>
                         </div>
                     </button>
-                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5">
+                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-4">
                         <p class="text-gray-500 text-sm pb-5 leading-relaxed border-t border-gray-100 pt-3">
                             التوصيل مجاني لجميع المدن المغربية، ويستغرق عادة بين 24 إلى 48 ساعة عمل كحد أقصى. سيتصل بك المندوب لتحديد الوقت المناسب لك.
                         </p>
@@ -937,26 +881,26 @@
             </div>
             
             <div class="text-center mt-8">
-                <a href="https://wa.me/212600000000" target="_blank" class="inline-flex items-center gap-2 bg-[#25D366]/10 text-[#25D366] font-bold px-6 py-3 rounded-full hover:bg-[#25D366] hover:text-white transition duration-300">
-                    <i class="fa-brands fa-whatsapp text-lg"></i> تواصل معنا عبر الواتساب
+                <a href="https://wa.me/212600000000" target="_blank" class="inline-flex items-center gap-2 bg-[#25D366]/10 text-[#25D366] font-bold px-5 py-3 rounded-full hover:bg-[#25D366] hover:text-white transition duration-300">
+                    <i class="fa-brands fa-whatsapp text-base"></i> تواصل معنا عبر الواتساب
                 </a>
             </div>
         </div>
     </section>
 
-    <footer class="bg-secondary text-white pt-20 pb-8 border-t-4 border-primary relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16 mb-16 text-center md:text-right">
+    <footer class="bg-secondary text-white pt-12 pb-6 border-t-4 border-primary relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-3 sm:px-5 lg:px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-10 mb-8 text-center md:text-right">
                 
                 <div class="md:col-span-5">
-                    <span class="text-3xl font-black font-serif text-white tracking-[0.1em] block mb-4">L'ÉLÉGANCE</span>
+                    <span class="text-2xl font-black font-serif text-white tracking-[0.1em] block mb-4">L'ÉLÉGANCE</span>
                     <p class="text-gray-400 text-sm leading-relaxed max-w-sm mx-auto md:mx-0">
                         علامة تجارية مغربية بروح فرنسية. نقدم لكم أرقى العطور بتركيز عالٍ ومكونات فاخرة لنصنع لكم حضوراً لا يُنسى.
                     </p>
                 </div>
                 
                 <div class="md:col-span-3">
-                    <h4 class="text-white font-black mb-6 text-lg">روابط سريعة</h4>
+                    <h4 class="text-white font-black mb-4 text-base">روابط سريعة</h4>
                     <ul class="space-y-4 text-sm text-gray-400 font-medium">
                         <li><a href="#showcase" class="hover:text-primary transition flex items-center justify-center md:justify-start gap-2"><i class="fa-solid fa-angle-left text-xs"></i> تشكيلة العطور</a></li>
                         <li><a href="#reviews" class="hover:text-primary transition flex items-center justify-center md:justify-start gap-2"><i class="fa-solid fa-angle-left text-xs"></i> آراء العملاء</a></li>
@@ -965,10 +909,10 @@
                 </div>
                 
                 <div class="md:col-span-4">
-                    <h4 class="text-white font-black mb-6 text-lg">خدمة العملاء</h4>
+                    <h4 class="text-white font-black mb-4 text-base">خدمة العملاء</h4>
                     <ul class="space-y-4 text-sm text-gray-300">
-                        <li class="flex items-center justify-center md:justify-start gap-3 bg-white/5 p-3 rounded-xl border border-white/10 hover:border-primary/50 transition">
-                            <div class="w-10 h-10 rounded-full bg-[#25D366]/20 flex items-center justify-center text-[#25D366]"><i class="fa-brands fa-whatsapp text-lg"></i></div>
+                        <li class="flex items-center justify-center md:justify-start gap-2 bg-white/5 p-3 rounded-xl border border-white/10 hover:border-primary/50 transition">
+                            <div class="w-9 h-9 rounded-full bg-[#25D366]/20 flex items-center justify-center text-[#25D366]"><i class="fa-brands fa-whatsapp text-base"></i></div>
                             <div class="text-right">
                                 <span class="block text-[10px] text-gray-400">تواصل معنا</span>
                                 <span dir="ltr" class="font-bold">+212 600 000 000</span>
@@ -978,7 +922,7 @@
                 </div>
             </div>
             
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-medium">
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-gray-500 font-medium">
                 <p>&copy; 2026 L'ÉLÉGANCE. جميع الحقوق محفوظة.</p>
                 <div class="flex items-center gap-2">
                     <i class="fa-solid fa-shield-halved text-gray-400"></i> تسوق آمن 100%
@@ -988,10 +932,10 @@
     </footer>
 
     <!-- Perfume Detail Modal -->
-    <div id="perfumeModal" role="dialog" aria-modal="true" class="fixed inset-0 z-[60] hidden bg-secondary/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-4 opacity-0 transition-opacity duration-300" onclick="if(event.target===this) closeModal()">
+    <div id="perfumeModal" role="dialog" aria-modal="true" class="fixed inset-0 z-[60] hidden bg-secondary/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-3 opacity-0 transition-opacity duration-300" onclick="if(event.target===this) closeModal()">
         <div class="bg-white max-w-3xl w-full rounded-[2rem] overflow-hidden relative shadow-2xl transform scale-95 transition-transform duration-300 flex flex-col md:flex-row max-h-[85vh] sm:max-h-[90vh] my-auto" id="perfumeModalContent">
             
-            <button onclick="closeModal()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/80 backdrop-blur border border-gray-200 hover:bg-secondary hover:text-white transition flex items-center justify-center text-secondary font-bold z-20 shadow-sm">
+            <button onclick="closeModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/80 backdrop-blur border border-gray-200 hover:bg-secondary hover:text-white transition flex items-center justify-center text-secondary font-bold z-20 shadow-sm">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             
@@ -999,29 +943,32 @@
                 <img id="modal-img" src="" alt="Perfume" class="absolute inset-0 w-full h-full object-cover">
             </div>
             
-            <div class="md:w-1/2 p-6 sm:p-8 md:p-10 flex flex-col justify-center bg-white overflow-y-auto">
-                <span id="modal-cat" class="text-primary text-xs font-black uppercase tracking-widest mb-2 block"></span>
-                <h3 id="modal-name" class="text-2xl sm:text-3xl font-black font-serif text-secondary mb-3"></h3>
-                <p id="modal-desc" class="text-gray-500 text-xs sm:text-sm leading-relaxed mb-6"></p>
+            <div class="md:w-1/2 p-5 sm:p-6 md:p-8 flex flex-col justify-center bg-white overflow-y-auto">
+                <div class="flex items-center justify-between mb-2">
+                    <span id="modal-cat" class="text-primary text-xs font-black uppercase tracking-widest block"></span>
+                    <span id="modal-rating" class="flex items-center gap-1 text-gold text-sm"></span>
+                </div>
+                <h3 id="modal-name" class="text-xl sm:text-2xl font-black font-serif text-secondary mb-3"></h3>
+                <p id="modal-desc" class="text-gray-500 text-xs sm:text-sm leading-relaxed mb-4"></p>
                 
-                <div class="space-y-3 sm:space-y-4 mb-6 sm:mb-8 bg-surface p-4 rounded-2xl border border-gray-100">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-leaf text-primary w-5 text-center text-base sm:text-lg"></i>
+                <div class="space-y-3 sm:space-y-4 mb-4 sm:mb-8 bg-surface p-3 rounded-2xl border border-gray-100">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-leaf text-primary w-5 text-center text-sm sm:text-base"></i>
                         <div><span class="text-gray-400 text-[10px] block font-bold">المكونات الأساسية</span><strong id="modal-notes" class="text-secondary text-xs sm:text-sm"></strong></div>
                     </div>
                     <div class="w-full h-px bg-gray-200"></div>
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-clock text-secondary w-5 text-center text-base sm:text-lg"></i>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-clock text-secondary w-5 text-center text-sm sm:text-base"></i>
                         <div><span class="text-gray-400 text-[10px] block font-bold">قوة الثبات</span><strong id="modal-dur" class="text-secondary text-xs sm:text-sm"></strong></div>
                     </div>
                 </div>
 
                 <div class="mt-auto">
                     <div class="flex items-end gap-2 mb-4">
-                        <span id="modal-price" class="text-2xl sm:text-3xl font-black text-secondary leading-none"></span>
+                        <span id="modal-price" class="text-xl sm:text-2xl font-black text-secondary leading-none"></span>
                         <span class="text-xs sm:text-sm text-gray-500 font-bold mb-1">درهم</span>
                     </div>
-                    <button onclick="selectFromModal()" class="w-full bg-secondary hover:bg-black text-white font-bold py-3.5 sm:py-4 rounded-xl transition shadow-lg flex items-center justify-center gap-2 text-sm sm:text-base">
+                    <button onclick="selectFromModal()" class="w-full bg-secondary hover:bg-black text-white font-bold py-3.5 sm:py-3 rounded-xl transition shadow-lg flex items-center justify-center gap-2 text-sm">
                         <i class="fa-solid fa-plus"></i> إضافة إلى طلبي
                     </button>
                 </div>
@@ -1030,23 +977,23 @@
     </div>
 
     <!-- Success Modal -->
-    <div id="successModal" class="fixed inset-0 z-[70] hidden bg-secondary/95 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
-        <div id="successModalContent" class="bg-white max-w-md w-full rounded-[2rem] p-8 text-center transform scale-95 transition-transform duration-300 shadow-2xl relative overflow-hidden">
+    <div id="successModal" class="fixed inset-0 z-[70] hidden bg-secondary/95 backdrop-blur-sm flex items-center justify-center p-3 opacity-0 transition-opacity duration-300">
+        <div id="successModalContent" class="bg-white max-w-md w-full rounded-[2rem] p-6 text-center transform scale-95 transition-transform duration-300 shadow-2xl relative overflow-hidden">
             <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNFOEI0QjgiIGZpbGwtb3BhY2l0eT0iMC4xNSIvPjwvc3ZnPg==')] opacity-50 z-0"></div>
             
             <div class="relative z-10">
-                <div class="w-24 h-24 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-green-100 relative">
-                    <i class="fa-solid fa-check text-5xl text-green-500 animate-[bounce_1s_ease-in-out]"></i>
+                <div class="w-24 h-24 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4 border-4 border-green-100 relative">
+                    <i class="fa-solid fa-check text-3xl text-green-500 animate-[bounce_1s_ease-in-out]"></i>
                 </div>
-                <h3 class="text-3xl font-black text-secondary mb-2 font-serif">شكراً لك!</h3>
-                <p class="text-gray-500 text-sm mb-6 leading-relaxed">تم تسجيل طلبك بنجاح. سيقوم فريقنا بالاتصال بك قريباً على رقمك لتأكيد عنوان التوصيل.</p>
+                <h3 class="text-2xl font-black text-secondary mb-2 font-serif">شكراً لك!</h3>
+                <p class="text-gray-500 text-sm mb-4 leading-relaxed">تم تسجيل طلبك بنجاح. سيقوم فريقنا بالاتصال بك قريباً على رقمك لتأكيد عنوان التوصيل.</p>
                 
-                <div class="bg-surface p-4 rounded-xl border border-gray-100 mb-6 text-right">
+                <div class="bg-surface p-3 rounded-xl border border-gray-100 mb-4 text-right">
                     <p class="text-xs text-gray-400 mb-1">رقم الطلب:</p>
-                    <p class="font-mono font-bold text-secondary tracking-widest text-lg">#ORD-<span id="ord-id"></span></p>
+                    <p class="font-mono font-bold text-secondary tracking-widest text-base">#ORD-<span id="ord-id"></span></p>
                 </div>
 
-                <button onclick="closeSuccessModal()" class="w-full bg-secondary text-white font-bold py-4 rounded-xl hover:bg-black transition">
+                <button onclick="closeSuccessModal()" class="w-full bg-secondary text-white font-bold py-3 rounded-xl hover:bg-black transition">
                     العودة للمتجر
                 </button>
             </div>
@@ -1060,11 +1007,11 @@
         <div class="flex flex-col">
             <span class="text-[10px] text-gray-400 font-bold">المجموع الإجمالي</span>
             <div class="flex items-end gap-1">
-                <span id="mobile-sticky-price" class="text-xl font-black text-secondary leading-none">299</span>
+                <span id="mobile-sticky-price" class="text-xl font-black text-secondary leading-none">349</span>
                 <span class="text-[10px] font-bold text-gray-500 mb-0.5">درهم</span>
             </div>
         </div>
-        <a href="#order-form" class="bg-secondary text-white hover:bg-primary hover:text-secondary font-bold px-6 py-3 rounded-xl text-sm shadow-md transition flex items-center gap-2">
+        <a href="#order-form" class="bg-secondary text-white hover:bg-primary hover:text-secondary font-bold px-5 py-3 rounded-xl text-sm shadow-md transition flex items-center gap-2">
             إتمام الطلب <i class="fa-solid fa-arrow-left-long text-primary"></i>
         </a>
     </div>
@@ -1091,6 +1038,9 @@
                 observer.observe(el);
             });
         });
+
+        // Google Sheets Webhook (Apps Script Web App URL) - بدل هاد الرابط برابطك
+        const GOOGLE_SHEET_WEBHOOK_URL = 'https://script.google.com/macros/s/PASTE_YOUR_DEPLOYMENT_ID_HERE/exec';
 
         // Cart State
         let selectedPerfumes = [];
@@ -1124,9 +1074,9 @@
                 
                 selectedPerfumes.forEach((perfume) => {
                     listElem.innerHTML += `
-                        <li class="flex items-center justify-between bg-white p-3 rounded-2xl border border-gray-100 shadow-sm gap-3">
-                            <div class="flex items-center gap-3">
-                                <img src="${perfume.image}" alt="${perfume.name}" class="w-12 h-12 object-cover rounded-xl border border-gray-200 shrink-0" onerror="this.src='https://placehold.co/100x100/FDFBFB/121212?text=Perfume'">
+                        <li class="flex items-center justify-between bg-white p-3 rounded-2xl border border-gray-100 shadow-sm gap-2">
+                            <div class="flex items-center gap-2">
+                                <img src="${perfume.image}" alt="${perfume.name}" class="w-10 h-10 object-cover rounded-xl border border-gray-200 shrink-0" onerror="this.src='https://placehold.co/100x100/FDFBFB/121212?text=Perfume'">
                                 <div>
                                     <h5 class="font-bold text-secondary text-xs sm:text-sm line-clamp-1">${perfume.name}</h5>
                                     <span class="text-[10px] text-gray-400 font-bold">عطر مركز 100 مل</span>
@@ -1157,8 +1107,8 @@
             const container = document.getElementById('toastContainer');
             const toast = document.createElement('div');
             const isErr = type === 'error';
-            toast.className = `toast-item ${isErr ? 'bg-red-600' : 'bg-secondary'} text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 text-sm font-bold border border-white/10`;
-            toast.innerHTML = `<i class="fa-solid ${isErr ? 'fa-triangle-exclamation' : 'fa-circle-check'} ${isErr ? 'text-white' : 'text-primary'} text-lg"></i> <span>${message}</span>`;
+            toast.className = `toast-item ${isErr ? 'bg-red-600' : 'bg-secondary'} text-white px-4 py-3 rounded-xl shadow-2xl flex items-center gap-2 text-sm font-bold border border-white/10`;
+            toast.innerHTML = `<i class="fa-solid ${isErr ? 'fa-triangle-exclamation' : 'fa-circle-check'} ${isErr ? 'text-white' : 'text-primary'} text-base"></i> <span>${message}</span>`;
             container.appendChild(toast);
             setTimeout(() => toast.remove(), 3300);
         }
@@ -1178,7 +1128,7 @@
             } else {
                 card.classList.remove('selected-perfume-card', 'border-secondary');
                 if(btn) {
-                    btn.innerHTML = '<i class="fa-solid fa-plus"></i>';
+                    btn.innerHTML = '<i class="fa-solid fa-plus text-xs"></i><span class="text-xs font-bold">اطلب الآن</span>';
                     btn.classList.replace('bg-primary', 'bg-secondary');
                     btn.classList.replace('text-secondary', 'text-white');
                 }
@@ -1281,7 +1231,17 @@
             updateCartUI();
         }
 
-        function openModal(name, desc, duration, price, img, cat, notes) {
+        function generateStarsHTML(rating) {
+            const r = parseFloat(rating) || 5;
+            const full = Math.floor(r);
+            const half = (r - full) >= 0.5;
+            let html = '';
+            for (let i = 0; i < full; i++) html += '<i class="fa-solid fa-star"></i>';
+            if (half) html += '<i class="fa-solid fa-star-half-stroke"></i>';
+            return html;
+        }
+
+        function openModal(name, desc, duration, price, img, cat, notes, rating) {
             activeModalData = { name, id: '', image: img };
             document.querySelectorAll('.perfume-card').forEach(c => {
                 if(c.querySelector('h3').innerText.includes(name)) activeModalData.id = c.id;
@@ -1294,6 +1254,7 @@
             document.getElementById('modal-cat').textContent = cat;
             document.getElementById('modal-price').textContent = price;
             document.getElementById('modal-img').src = img;
+            document.getElementById('modal-rating').innerHTML = generateStarsHTML(rating);
 
             const modal = document.getElementById('perfumeModal');
             modal.classList.remove('hidden');
@@ -1365,6 +1326,30 @@
             btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> جاري التأكيد...';
             btn.disabled = true;
 
+            const orderId = Math.floor(100000 + Math.random() * 900000);
+            const perfumesText = selectedPerfumes.map(p => `${p.name} (×${p.quantity})`).join(' + ') || 'الاختيار سيتم من طرفنا';
+
+            const orderData = {
+                orderId: orderId,
+                fullname: name,
+                phone: phone,
+                city: city,
+                package: currentPrice,
+                maxPerfumes: currentMax,
+                perfumes: perfumesText,
+                totalPrice: currentPrice,
+                date: new Date().toLocaleString('fr-FR', { timeZone: 'Africa/Casablanca' }),
+                source: 'L\'ÉLÉGANCE Landing Page'
+            };
+
+            // بعث الطلب لـ Google Sheets (no-cors: ماكنقراوش الرد، غير كنبعثو)
+            fetch(GOOGLE_SHEET_WEBHOOK_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(orderData)
+            }).catch(err => console.error('تعذر إرسال الطلب لـ Google Sheets:', err));
+
             setTimeout(() => {
                 document.getElementById('checkoutForm').reset();
                 selectedPerfumes = [];
@@ -1373,7 +1358,7 @@
                 });
                 updateCartUI();
                 
-                document.getElementById('ord-id').textContent = Math.floor(100000 + Math.random() * 900000);
+                document.getElementById('ord-id').textContent = orderId;
                 
                 const sModal = document.getElementById('successModal');
                 sModal.classList.remove('hidden');
