@@ -21,8 +21,8 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#B76E79', // Rose Gold أنيق
-                        primaryDark: '#96525E',
+                        primary: '#6B7280', // رمادي فحمي/فضي أنيق
+                        primaryDark: '#4B5563',
                         secondary: '#121212',
                         gold: '#C5A059', // ذهبي أنيق متناسق
                         surface: '#FDFBFB'
@@ -125,7 +125,7 @@
             100% { background-position: 200% 0; }
         }
         .shimmer-text {
-            background: linear-gradient(90deg, #fff 0%, #B76E79 50%, #fff 100%);
+            background: linear-gradient(90deg, #fff 0%, #6B7280 50%, #fff 100%);
             background-size: 200% auto;
             color: transparent;
             -webkit-background-clip: text;
@@ -197,7 +197,7 @@
         .qty-stepper button:hover { background: #e5e7eb; }
         .qty-stepper span { width: 2.75rem; text-align: center; font-weight: 900; color: #121212; }
 
-        .breadcrumb a:hover { color: #B76E79; }
+        .breadcrumb a:hover { color: #6B7280; }
 
         .skeleton-none { display: none; }
     </style>
@@ -439,7 +439,7 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" id="perfume-grid"></div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5" id="perfume-grid"></div>
             </div>
         </section>
 
@@ -555,13 +555,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="text-center mt-8">
-                    <a href="https://wa.me/212600000000" target="_blank" class="inline-flex items-center gap-2 bg-[#25D366]/10 text-[#25D366] font-bold px-5 py-3 rounded-full hover:bg-[#25D366] hover:text-white transition duration-300">
-                        <i class="fa-brands fa-whatsapp text-base"></i> تواصل معنا عبر الواتساب
-                    </a>
-                </div>
-            </div>
         </section>
     </section>
 
@@ -701,6 +694,12 @@
 
     <div id="toastContainer" aria-live="polite"></div>
 
+    <!-- Floating WhatsApp Button (Fixed) -->
+    <a href="https://wa.me/212600000000" target="_blank" aria-label="تواصل معنا عبر الواتساب"
+       class="fixed z-50 bottom-24 md:bottom-6 right-4 sm:right-6 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_10px_25px_rgba(0,0,0,0.2)] hover:scale-110 transition-transform duration-300">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+
     <!-- Mobile Sticky CTA Bottom -->
     <div id="mobileSticky" class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-xl border-t border-gray-100 p-3 flex md:hidden items-center justify-between shadow-[0_-10px_20px_rgba(0,0,0,0.05)] pb-6 sm:pb-3">
         <div class="flex flex-col">
@@ -778,6 +777,81 @@
                 oldPrice: 250,
                 image: 'https://images.unsplash.com/photo-1591892212776-a09de24dbe84?auto=format&fit=crop&q=80&w=800',
                 notes: 'العنبر الذهبي، الفانيليا، القرفة',
+                rating: 5
+            },
+            {
+                id: 'noir-mystique',
+                name: 'NOIR MYSTIQUE',
+                badge: 'حصري',
+                badgeClass: 'bg-secondary/90 text-white',
+                tags: ['men', 'oriental'],
+                catLabel: 'شرقي - قوي',
+                desc: 'عطر رجالي غامض بمزيج من الجلد الفاخر والتوابل الداكنة.',
+                duration: '48+ ساعة',
+                price: 149,
+                oldPrice: 250,
+                image: 'https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=800',
+                notes: 'الجلد، الفلفل الأسود، خشب الأرز',
+                rating: 4.5
+            },
+            {
+                id: 'jasmine-nuit',
+                name: 'JASMINE NUIT',
+                badge: 'نسائي',
+                badgeClass: 'bg-white/85 text-secondary border border-white/60',
+                tags: ['women'],
+                catLabel: 'زهري - فاخر',
+                desc: 'ياسمين ليلي فاخر ممزوج بالمسك الأبيض ولمسة من الأوركيد.',
+                duration: '40+ ساعة',
+                price: 149,
+                oldPrice: 250,
+                image: 'https://images.unsplash.com/photo-1608528577891-eb055944f2e7?auto=format&fit=crop&q=80&w=800',
+                notes: 'الياسمين، المسك الأبيض، الأوركيد',
+                rating: 5
+            },
+            {
+                id: 'citron-royal',
+                name: 'CITRON ROYAL',
+                badge: 'الأكثر مبيعاً',
+                badgeClass: 'bg-secondary/90 text-white',
+                tags: ['men'],
+                catLabel: 'حمضي - منعش',
+                desc: 'انتعاش حمضي فاخر مع لمسات من الزنجبيل وخشب الصندل.',
+                duration: '36+ ساعة',
+                price: 149,
+                oldPrice: 250,
+                image: 'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=800',
+                notes: 'الليمون، الزنجبيل، خشب الصندل',
+                rating: 4.5
+            },
+            {
+                id: 'velvet-orchid',
+                name: 'VELVET ORCHID',
+                badge: 'إصدار جديد',
+                badgeClass: 'bg-gold/90 text-white',
+                tags: ['women', 'oriental'],
+                catLabel: 'شرقي - ناعم',
+                desc: 'أوركيد مخملي دافئ يمتزج بالعنبر والفانيليا الفاخرة.',
+                duration: '44+ ساعة',
+                price: 149,
+                oldPrice: 250,
+                image: 'https://images.unsplash.com/photo-1587017539504-67cfbddac569?auto=format&fit=crop&q=80&w=800',
+                notes: 'الأوركيد، العنبر، الفانيليا',
+                rating: 5
+            },
+            {
+                id: 'oud-signature',
+                name: 'OUD SIGNATURE',
+                badge: 'حصري',
+                badgeClass: 'bg-secondary/90 text-white',
+                tags: ['men', 'oriental'],
+                catLabel: 'شرقي - عود',
+                desc: 'توقيع عطري فاخر بعود أصيل ممزوج بالورد والبخور الفاخر.',
+                duration: '48+ ساعة',
+                price: 149,
+                oldPrice: 250,
+                image: 'https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&q=80&w=800',
+                notes: 'العود، الورد، البخور',
                 rating: 5
             }
         ];
@@ -863,32 +937,32 @@
         // ==============================================================
         function productCardHTML(p, idx) {
             return `
-            <div class="perfume-card product-item ${p.tags.join(' ')} bg-white rounded-[1.25rem] border border-gray-100 p-3 shadow-sm hover:shadow-luxury hover:border-primary/30 hover:-translate-y-1.5 transition-all duration-400 group relative flex flex-col reveal-on-scroll" id="card-${p.id}" style="transition-delay: ${idx * 80}ms;">
-                <div class="absolute top-5 right-5 z-10 flex flex-col gap-2">
-                    <span class="${p.badgeClass} backdrop-blur-md font-bold text-[11px] px-3.5 py-2 rounded-full uppercase tracking-widest shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-fire text-[10px]"></i> ${p.badge}</span>
+            <div class="perfume-card product-item ${p.tags.join(' ')} bg-white rounded-2xl border border-gray-100 p-2.5 shadow-sm hover:shadow-luxury hover:border-primary/30 hover:-translate-y-1.5 transition-all duration-400 group relative flex flex-col reveal-on-scroll" id="card-${p.id}" style="transition-delay: ${idx * 80}ms;">
+                <div class="absolute top-3.5 right-3.5 z-10 flex flex-col gap-2">
+                    <span class="${p.badgeClass} backdrop-blur-md font-bold text-[9px] px-2.5 py-1.5 rounded-full uppercase tracking-widest shadow-lg flex items-center gap-1"><i class="fa-solid fa-fire text-[9px]"></i> ${p.badge}</span>
                 </div>
 
-                <div class="h-56 sm:h-64 rounded-[1.25rem] relative overflow-hidden cursor-pointer img-hover-zoom bg-gray-50" onclick="openModal('${p.id}')">
+                <div class="h-44 sm:h-52 rounded-2xl relative overflow-hidden cursor-pointer img-hover-zoom bg-gray-50" onclick="openModal('${p.id}')">
                     <img src="${p.image}" loading="lazy" alt="${p.name}" class="absolute inset-0 w-full h-full object-cover">
                     <div class="absolute inset-0 bg-secondary/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-[2px]">
-                        <span class="bg-white/90 text-secondary text-sm font-bold px-4 py-2.5 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">نظرة سريعة</span>
+                        <span class="bg-white/90 text-secondary text-xs font-bold px-3.5 py-2 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">نظرة سريعة</span>
                     </div>
                 </div>
 
-                <div class="px-1 pt-5 pb-1 flex-1 flex flex-col">
-                    <a href="#/product/${p.id}" class="text-xl font-black font-serif text-secondary mb-4 leading-tight tracking-tight line-clamp-1 cursor-pointer hover:text-primaryDark transition-colors">${p.name}</a>
+                <div class="px-1 pt-3.5 pb-1 flex-1 flex flex-col">
+                    <a href="#/product/${p.id}" class="text-base font-black font-serif text-secondary mb-3 leading-tight tracking-tight line-clamp-1 cursor-pointer hover:text-primaryDark transition-colors">${p.name}</a>
 
-                    <div class="mt-auto flex items-center flex-wrap justify-between gap-2 pt-3 border-t border-gray-50">
+                    <div class="mt-auto flex items-center flex-wrap justify-between gap-2 pt-2.5 border-t border-gray-50">
                         <div class="flex flex-col">
                             <div class="flex items-baseline gap-1.5">
-                                <span class="text-xl font-black text-secondary leading-none">${p.price}</span>
-                                <span class="text-xs text-gray-400 font-bold">درهم</span>
-                                <span class="line-through text-xs text-gray-400">${p.oldPrice} د.م</span>
+                                <span class="text-base font-black text-secondary leading-none">${p.price}</span>
+                                <span class="text-[10px] text-gray-400 font-bold">درهم</span>
+                                <span class="line-through text-[10px] text-gray-400">${p.oldPrice} د.م</span>
                             </div>
                         </div>
-                        <button onclick="addToCart('${p.id}', 1)" class="h-10 pl-4 pr-3.5 rounded-full bg-secondary text-white hover:bg-primary hover:text-secondary flex items-center justify-center gap-1.5 transition-all shadow-md group-hover:scale-110 select-btn shrink-0">
-                            <i class="fa-solid fa-plus text-xs"></i>
-                            <span class="text-xs font-bold">أضف للسلة</span>
+                        <button onclick="addToCart('${p.id}', 1)" class="h-8 w-8 sm:w-auto sm:pl-3 sm:pr-2.5 rounded-full bg-secondary text-white hover:bg-primary hover:text-secondary flex items-center justify-center gap-1.5 transition-all shadow-md group-hover:scale-110 select-btn shrink-0">
+                            <i class="fa-solid fa-plus text-[10px]"></i>
+                            <span class="hidden sm:inline text-[10px] font-bold">أضف للسلة</span>
                         </button>
                     </div>
                 </div>
