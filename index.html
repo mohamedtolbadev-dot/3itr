@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -17,19 +17,19 @@
                     colors: {
                         brand: {
                             white: '#FFFFFF',
-                            black: '#1A2E50', // أزرق داكن مستوحى من قماش الحذاء
+                            black: '#1A2E50',
                             dark: '#111D36',
                             gray: '#F6F7F9',
-                            slate: '#8E94A3', // رمادي مستوحى من شبكة الحذاء
+                            slate: '#8E94A3',
                             border: '#E2E8F0',
-                            accent: '#FF5A00', // برتقالي ساطع من تفاصيل الحذاء
+                            accent: '#FF5A00',
                             accentHover: '#E04F00',
                             emerald: '#059669'
                         }
                     },
                     fontFamily: {
-                        sans: ['Cairo', 'sans-serif'],
-                        serif: ['Tajawal', 'serif'],
+                        sans: ['Readex Pro', 'sans-serif'],
+                        serif: ['Alexandria', 'sans-serif'],
                     },
                     animation: {
                         'float': 'float 5s ease-in-out infinite',
@@ -39,7 +39,7 @@
                     keyframes: {
                         float: {
                             '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-12px)' },
+                            '50%': { transform: 'translateY(-10px)' },
                         },
                         shine: {
                             '100%': { left: '125%' }
@@ -52,18 +52,19 @@
 
     <style>
         body {
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Readex Pro', sans-serif;
             background-color: #FFFFFF;
             color: #1A2E50;
             -webkit-font-smoothing: antialiased;
             text-rendering: optimizeLegibility;
+            font-size: 0.92rem;
         }
 
         h1, h2, h3, h4, .font-serif {
-            font-family: 'Tajawal', serif;
+            font-family: 'Alexandria', sans-serif;
         }
 
-        /* Custom luxury scrollbar */
+        /* Custom luxury scrollbar with rounded corners */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -72,6 +73,7 @@
         }
         ::-webkit-scrollbar-thumb {
             background: #1A2E50;
+            border-radius: 9999px;
         }
 
         /* Border Grid Modern lines */
@@ -79,31 +81,32 @@
             border-color: #E5E7EB;
         }
 
-        /* Input Luxury Focus */
+        /* Input Luxury Focus - Rounded */
         .modern-input {
             width: 100%;
             background: #F9FAFB;
             border: 1px solid #E5E7EB;
-            border-radius: 0;
-            padding: 1rem 1.25rem;
-            font-size: 0.95rem;
+            border-radius: 0.875rem;
+            padding: 0.85rem 1.1rem;
+            font-size: 0.875rem;
             color: #1A2E50;
             transition: all 0.3s ease;
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Readex Pro', sans-serif;
         }
         .modern-input:focus {
             outline: none;
             background: #FFFFFF;
             border-color: #1A2E50;
-            box-shadow: 0 0 0 4px rgba(26, 46, 80, 0.06);
+            box-shadow: 0 0 0 3px rgba(26, 46, 80, 0.08);
         }
 
-        /* Custom Size Selector Pill */
+        /* Custom Size Selector Pill - Soft Rounded Design */
         .size-btn {
             border: 1px solid #E5E7EB;
             background: #FFFFFF;
             transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            font-family: 'Tajawal', serif;
+            font-family: 'Alexandria', sans-serif;
+            border-radius: 0.75rem;
         }
         .size-btn:hover {
             border-color: #1A2E50;
@@ -112,14 +115,14 @@
             background-color: #1A2E50;
             color: #FFFFFF;
             border-color: #1A2E50;
-            box-shadow: 0 10px 20px -5px rgba(26, 46, 80, 0.3);
+            box-shadow: 0 4px 12px rgba(26, 46, 80, 0.18);
         }
 
         /* Reveal animations on scroll */
         .reveal {
             opacity: 0;
-            transform: translateY(24px);
-            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .reveal.active {
             opacity: 1;
@@ -130,23 +133,25 @@
         .image-hover-zoom {
             overflow: hidden;
             position: relative;
+            border-radius: 1.25rem;
         }
         .image-hover-zoom img {
             transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .image-hover-zoom:hover img {
-            transform: scale(1.06);
+            transform: scale(1.05);
         }
 
-        /* Glassmorphism Cards */
+        /* Glassmorphism Cards - Smooth Rounded Edges */
         .glass-card {
-            background: rgba(255, 255, 255, 0.88);
+            background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(229, 231, 235, 0.8);
+            border: 1px solid rgba(229, 231, 235, 0.9);
+            border-radius: 1.25rem;
         }
 
-        /* Primary Dynamic Button */
+        /* Primary Dynamic Button - Rounded Aesthetic */
         .btn-luxury {
             position: relative;
             overflow: hidden;
@@ -154,7 +159,7 @@
             color: #FFFFFF;
             transition: all 0.3s ease;
             z-index: 1;
-            border-radius: 0;
+            border-radius: 0.875rem;
         }
         .btn-luxury::before {
             content: '';
@@ -174,7 +179,7 @@
             transform-origin: left;
         }
         .btn-luxury:hover {
-            box-shadow: 0 12px 24px -6px rgba(255, 90, 0, 0.35);
+            box-shadow: 0 8px 20px rgba(255, 90, 0, 0.28);
         }
 
         /* Modal backdrop Blur */
@@ -187,13 +192,13 @@
 <body class="selection:bg-brand-black selection:text-brand-white overflow-x-hidden antialiased text-brand-black bg-white">
 
     <!-- TOP ANNOUNCEMENT BAR -->
-    <div class="bg-brand-black text-white text-xs py-2.5 px-4 font-sans border-b border-white/10">
-        <div class="max-w-[1600px] mx-auto flex justify-between items-center text-center sm:text-right">
+    <div class="bg-brand-black text-white text-[11px] py-2 px-4 font-sans border-b border-white/10">
+        <div class="max-w-6xl mx-auto flex justify-between items-center text-center sm:text-right">
             <div class="flex items-center gap-2 mx-auto sm:mx-0">
                 <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span class="font-medium flex items-center gap-1.5"><svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.242-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> توصيل مجاني لجميع المدن المغربية | الدفع بعد المعاينة عند الاستلام</span>
+                <span class="font-medium flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.242-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> توصيل مجاني لجميع المدن المغربية | الدفع بعد المعاينة عند الاستلام</span>
             </div>
-            <div class="hidden sm:flex items-center gap-6 text-gray-300 text-[11px]">
+            <div class="hidden sm:flex items-center gap-5 text-gray-300 text-[10.5px]">
                 <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg> شحن سريع (24 - 48 ساعة)</span>
                 <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg> ضمان استبدال لمدة 7 أيام</span>
             </div>
@@ -202,15 +207,15 @@
 
     <!-- MAIN NAVBAR -->
     <nav class="bg-brand-white/95 backdrop-blur-md sticky top-0 z-50 border-b grid-border transition-all duration-300" id="navbar">
-        <div class="max-w-[1600px] mx-auto px-4 sm:px-8">
-            <div class="flex justify-between items-center h-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center h-16 sm:h-18">
                 
                 <!-- MENU BUTTON & DESKTOP NAV -->
                 <div class="w-1/3 flex justify-start items-center">
-                    <button id="menuBtn" aria-label="Open Menu" class="md:hidden text-brand-black p-2 hover:bg-gray-100 transition-colors">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    <button id="menuBtn" aria-label="Open Menu" class="md:hidden text-brand-black p-2 hover:bg-gray-100 transition-colors border border-gray-200 rounded-xl">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </button>
-                    <div class="hidden md:flex items-center gap-8 text-xs font-bold tracking-[0.12em] uppercase">
+                    <div class="hidden md:flex items-center gap-6 text-[11px] font-bold tracking-wider uppercase">
                         <a href="#philosophy" class="text-gray-600 hover:text-brand-black transition-colors py-2 border-b-2 border-transparent hover:border-brand-black">الرؤية والتصميم</a>
                         <a href="#details" class="text-gray-600 hover:text-brand-black transition-colors py-2 border-b-2 border-transparent hover:border-brand-black">المعرض التفصيلي</a>
                         <a href="#reviews" class="text-gray-600 hover:text-brand-black transition-colors py-2 border-b-2 border-transparent hover:border-brand-black">آراء العملاء</a>
@@ -220,18 +225,18 @@
 
                 <!-- LOGO -->
                 <a href="#" class="w-1/3 flex justify-center items-center group">
-                    <span class="font-serif font-black text-2xl sm:text-3xl tracking-tight uppercase transition-transform duration-300 group-hover:scale-105">
+                    <span class="font-serif font-black text-xl sm:text-2xl tracking-tight uppercase transition-transform duration-300 group-hover:scale-105">
                         Cause<span class="text-brand-accent">Of</span>
                     </span>
                 </a>
                 
                 <!-- CTA ACTION -->
                 <div class="w-1/3 flex justify-end items-center gap-3">
-                    <a href="#order" class="hidden md:inline-flex items-center justify-center bg-brand-black text-brand-white px-6 py-2.5 text-xs font-bold hover:bg-brand-accent transition-all shadow-md hover:shadow-lg uppercase tracking-wider gap-2">
+                    <a href="#order" class="hidden md:inline-flex items-center justify-center bg-brand-black text-brand-white px-5 py-2 text-[11px] font-bold hover:bg-brand-accent transition-all uppercase tracking-wider gap-2 rounded-xl">
                         <span>اطلب حذاءك الآن</span>
-                        <svg class="w-4 h-4 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        <svg class="w-3.5 h-3.5 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
-                    <a href="#order" class="md:hidden bg-brand-black text-brand-white px-4 py-2 text-xs font-bold">
+                    <a href="#order" class="md:hidden bg-brand-black text-brand-white px-3.5 py-1.5 text-xs font-bold rounded-lg">
                         اطلب الآن
                     </a>
                 </div>
@@ -240,20 +245,20 @@
 
         <!-- MOBILE MENU DRAWER -->
         <div id="mobileMenu" class="fixed inset-0 bg-brand-white z-[60] transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col hidden">
-            <div class="flex justify-between items-center p-6 border-b grid-border">
-                <span class="font-serif font-bold text-2xl uppercase">Cause<span class="text-brand-accent">Of</span></span>
-                <button id="closeMenuBtn" aria-label="Close Menu" class="p-2 text-brand-black hover:bg-gray-100">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            <div class="flex justify-between items-center p-5 border-b grid-border">
+                <span class="font-serif font-bold text-xl uppercase">Cause<span class="text-brand-accent">Of</span></span>
+                <button id="closeMenuBtn" aria-label="Close Menu" class="p-2 text-brand-black border border-gray-200 rounded-xl hover:bg-gray-100">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </button>
             </div>
-            <div class="flex-1 flex flex-col justify-center items-center gap-8 text-2xl font-serif">
+            <div class="flex-1 flex flex-col justify-center items-center gap-6 text-xl font-serif">
                 <a href="#philosophy" class="mobile-link text-gray-700 hover:text-brand-black transition-colors">الرؤية والفلسفة</a>
                 <a href="#details" class="mobile-link text-gray-700 hover:text-brand-black transition-colors">معرض الصور</a>
                 <a href="#reviews" class="mobile-link text-gray-700 hover:text-brand-black transition-colors">آراء العملاء</a>
                 <a href="#faq" class="mobile-link text-gray-700 hover:text-brand-black transition-colors">الأسئلة الشائعة</a>
             </div>
-            <div class="p-6 border-t grid-border bg-gray-50">
-                <a href="#order" class="mobile-link btn-luxury block w-full text-center py-4 text-lg font-bold tracking-widest shadow-xl">
+            <div class="p-5 border-t grid-border bg-gray-50">
+                <a href="#order" class="mobile-link btn-luxury block w-full text-center py-3.5 text-base font-bold tracking-wider border border-brand-black rounded-xl">
                     طلب الحذاء (399 درهم)
                 </a>
             </div>
@@ -262,99 +267,99 @@
 
     <!-- HERO SECTION -->
     <header class="border-b grid-border relative bg-white overflow-hidden">
-        <div class="max-w-[1600px] mx-auto flex flex-col lg:flex-row min-h-[85vh]">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row min-h-[75vh]">
             
             <!-- HERO CONTENT (RIGHT) -->
-            <div class="w-full lg:w-[55%] p-6 sm:p-12 lg:p-20 flex flex-col justify-center border-b lg:border-b-0 lg:border-l grid-border relative z-10">
+            <div class="w-full lg:w-[55%] p-5 sm:p-8 lg:p-12 flex flex-col justify-center border-b lg:border-b-0 lg:border-l grid-border relative z-10">
                 
                 <!-- RATING & BADGE -->
-                <div class="mb-6 flex flex-wrap items-center gap-3 reveal">
-                    <div class="bg-brand-black text-white text-[11px] font-bold px-3 py-1 uppercase tracking-wider">
+                <div class="mb-4 flex flex-wrap items-center gap-2.5 reveal">
+                    <div class="bg-brand-black text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                         إصدار 2026 الحصري
                     </div>
-                    <div class="flex items-center gap-1.5 bg-amber-50 border border-amber-200 px-3 py-1 text-xs font-semibold text-amber-900">
-                        <div class="flex text-amber-500">★★★★★</div>
+                    <div class="flex items-center gap-1.5 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-full text-[11px] font-semibold text-amber-900">
+                        <div class="flex text-amber-500 text-xs">★★★★★</div>
                         <span>4.9 / 5 (1,240+ زبون سعيد)</span>
                     </div>
                 </div>
                 
-                <h1 class="text-4xl sm:text-6xl lg:text-[6.5rem] font-serif font-black leading-[1.05] tracking-tight mb-6 reveal">
+                <h1 class="text-3xl sm:text-5xl lg:text-5xl font-serif font-black leading-[1.12] tracking-tight mb-4 reveal">
                     خطوة <br>
                     <span class="text-brand-accent">نحو التفرد والراحة.</span>
                 </h1>
                 
-                <p class="text-base sm:text-lg lg:text-xl text-gray-600 font-sans leading-relaxed max-w-xl mb-10 reveal">
+                <p class="text-xs sm:text-sm lg:text-base text-gray-600 font-sans leading-relaxed max-w-lg mb-8 reveal">
                     ليس مجرد حذاء عريض المظهر، بل هو تحفة تم تصميمها بعناية فائقة لتجمع بين المظهر الفاخر والأداء المريح طوال اليوم مع لمسة أنيقة تناسب جميع خيارات ملابسك.
                 </p>
                 
                 <!-- CTA & PRICE ROW -->
-                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 reveal mb-10">
-                    <a href="#order" class="btn-luxury px-8 py-4 text-base tracking-widest font-bold uppercase flex items-center justify-center gap-3 shadow-xl">
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 reveal mb-8">
+                    <a href="#order" class="btn-luxury px-6 py-3.5 text-xs sm:text-sm tracking-wider font-bold uppercase flex items-center justify-center gap-2.5 shadow-md">
                         <span>اطلب الآن بخصم 25%</span>
-                        <svg class="w-5 h-5 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        <svg class="w-4 h-4 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
-                    <div class="flex items-center justify-between sm:justify-start gap-4 bg-gray-50 border border-gray-200 p-3 px-5">
+                    <div class="flex items-center justify-between sm:justify-start gap-3 bg-gray-50 border border-gray-200 p-2.5 px-4 rounded-xl">
                         <div>
-                            <span class="text-xs text-gray-500 block">السعر الحالي</span>
-                            <span class="text-3xl font-black font-serif text-brand-black">399 <span class="text-sm font-sans text-gray-600">درهم</span></span>
+                            <span class="text-[10px] text-gray-500 block">السعر الحالي</span>
+                            <span class="text-2xl font-black font-serif text-brand-black">399 <span class="text-xs font-sans text-gray-600">درهم</span></span>
                         </div>
-                        <div class="border-r border-gray-300 pr-4">
-                            <span class="text-xs text-gray-400 line-through block">550 درهم</span>
-                            <span class="text-xs font-bold text-emerald-600 bg-emerald-100 px-2 py-0.5 rounded">توفير 151 درهم</span>
+                        <div class="border-r border-gray-300 pr-3">
+                            <span class="text-[10px] text-gray-400 line-through block">550 درهم</span>
+                            <span class="text-[10px] font-bold text-emerald-600 bg-emerald-100 px-2 py-0.5 rounded-md">توفير 151 درهم</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- QUICK TRUST POINTS -->
-                <div class="grid grid-cols-3 gap-4 pt-6 border-t grid-border text-center sm:text-right">
-                    <div class="flex items-center gap-2">
-                        <span class="text-emerald-600 bg-emerald-50 p-1.5 rounded-lg"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></span>
-                        <span class="text-xs sm:text-sm font-bold text-gray-700">شحن مجاني بالكامل</span>
+                <div class="grid grid-cols-3 gap-3 pt-5 border-t grid-border text-center sm:text-right">
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-emerald-600 bg-emerald-50 p-1 rounded-md"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></span>
+                        <span class="text-[11px] sm:text-xs font-bold text-gray-700">شحن مجاني بالكامل</span>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <span class="text-emerald-600 bg-emerald-50 p-1.5 rounded-lg"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></span>
-                        <span class="text-xs sm:text-sm font-bold text-gray-700">افحص حذاءك قبل الدفع</span>
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-emerald-600 bg-emerald-50 p-1 rounded-md"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></span>
+                        <span class="text-[11px] sm:text-xs font-bold text-gray-700">افحص حذاءك قبل الدفع</span>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <span class="text-emerald-600 bg-emerald-50 p-1.5 rounded-lg"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></span>
-                        <span class="text-xs sm:text-sm font-bold text-gray-700">استبدال مقاس مجاني</span>
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-emerald-600 bg-emerald-50 p-1 rounded-md"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></span>
+                        <span class="text-[11px] sm:text-xs font-bold text-gray-700">استبدال مقاس مجاني</span>
                     </div>
                 </div>
             </div>
             
             <!-- HERO IMAGE CONTAINER (LEFT) -->
-            <div class="w-full lg:w-[45%] bg-white border-r grid-border flex flex-col items-center justify-center p-6 sm:p-12 relative reveal overflow-hidden">
+            <div class="w-full lg:w-[45%] bg-white border-r grid-border flex flex-col items-center justify-center p-5 sm:p-8 relative reveal overflow-hidden">
                 
-                <div class="absolute top-6 right-6 text-[10px] text-gray-400 tracking-[0.25em] font-sans uppercase">
+                <div class="absolute top-4 right-4 text-[9px] text-gray-400 tracking-wider font-sans uppercase">
                     Model Ref: CauseOf 2026
                 </div>
                 
                 <!-- Main Product Image with subtle Floating Animation -->
-                <div class="relative w-full max-w-md my-8">
-                    <div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-4/5 h-8 bg-black/15 blur-2xl rounded-[100%]"></div>
-                    <img src="img_1.png" alt="CauseOf Premium Shoe" class="w-full object-contain animate-float relative z-10 filter drop-shadow-2xl">
+                <div class="relative w-full max-w-sm my-6">
+                    <div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-4/5 h-5 bg-black/10 blur-lg rounded-full"></div>
+                    <img src="img_1.png" alt="CauseOf Premium Shoe" class="w-full object-contain animate-float relative z-10 filter drop-shadow-lg">
                 </div>
 
-                <!-- RESPONSIVE GLASS CARDS OVERLAY -->
-                <div class="w-full grid grid-cols-2 gap-3 relative z-20 mt-4">
+                <!-- RESPONSIVE GLASS CARDS OVERLAY - ROUNDED CORNERS -->
+                <div class="w-full grid grid-cols-2 gap-2.5 relative z-20 mt-2">
                     
-                    <div class="glass-card p-3 shadow-sm flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-lg bg-brand-black text-brand-white flex items-center justify-center font-bold text-base shrink-0">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    <div class="glass-card p-2.5 shadow-sm flex items-center gap-2.5">
+                        <div class="w-8 h-8 bg-brand-black text-brand-white flex items-center justify-center font-bold text-xs rounded-xl shrink-0">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
                         </div>
                         <div class="text-right">
-                            <p class="text-[10px] uppercase font-bold text-brand-accent tracking-wider">خامات فاخرة</p>
-                            <p class="font-bold text-xs text-brand-black">جلد وجير طبيعي</p>
+                            <p class="text-[9px] uppercase font-bold text-brand-accent tracking-wider">خامات فاخرة</p>
+                            <p class="font-bold text-[11px] text-brand-black">جلد وجير طبيعي</p>
                         </div>
                     </div>
 
-                    <div class="glass-card p-3 rounded-xl shadow-sm flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-lg bg-brand-black text-brand-white flex items-center justify-center font-bold text-base shrink-0">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                    <div class="glass-card p-2.5 shadow-sm flex items-center gap-2.5">
+                        <div class="w-8 h-8 bg-brand-black text-brand-white flex items-center justify-center font-bold text-xs rounded-xl shrink-0">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
                         </div>
                         <div class="text-right">
-                            <p class="text-[10px] uppercase font-bold text-brand-accent tracking-wider">أقصى درجات الراحة</p>
-                            <p class="font-bold text-xs text-brand-black">نعل مرن وممتص للصدمات</p>
+                            <p class="text-[9px] uppercase font-bold text-brand-accent tracking-wider">أقصى درجات الراحة</p>
+                            <p class="font-bold text-[11px] text-brand-black">نعل مرن وممتص للصدمات</p>
                         </div>
                     </div>
 
@@ -366,39 +371,39 @@
     </header>
 
     <!-- ADVANTAGES BANNER -->
-    <section class="border-b grid-border bg-white py-12">
-        <div class="max-w-[1600px] mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section class="border-b grid-border bg-white py-8 sm:py-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
                 <!-- CARD 1 -->
-                <div class="p-8 rounded-2xl bg-white border grid-border flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 reveal">
-                    <div class="w-16 h-16 rounded-2xl bg-brand-black text-white flex items-center justify-center mb-6 shadow-md">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                <div class="p-6 bg-white border grid-border rounded-2xl flex flex-col items-center text-center hover:border-brand-black transition-all duration-300 reveal">
+                    <div class="w-12 h-12 bg-brand-black text-white flex items-center justify-center mb-4 rounded-xl shadow-sm">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-serif font-bold text-brand-black mb-2">توصيل مجاني وسريع</h3>
-                    <p class="text-gray-600 leading-relaxed text-sm max-w-xs">
+                    <h3 class="text-xl font-serif font-bold text-brand-black mb-1.5">توصيل مجاني وسريع</h3>
+                    <p class="text-gray-600 leading-relaxed text-xs max-w-xs">
                         نشحن طلبك مجاناً وبأعلى السرعات لكافة المدن المغربية، وتدفع ثمنه فقط عند وصوله واستلامه.
                     </p>
                 </div>
 
                 <!-- CARD 2 -->
-                <div class="p-8 bg-white border grid-border flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 reveal">
-                    <div class="w-16 h-16 bg-brand-black text-white flex items-center justify-center mb-6 shadow-md">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                <div class="p-6 bg-white border grid-border rounded-2xl flex flex-col items-center text-center hover:border-brand-black transition-all duration-300 reveal">
+                    <div class="w-12 h-12 bg-brand-black text-white flex items-center justify-center mb-4 rounded-xl shadow-sm">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-serif font-bold text-brand-black mb-2">جودة وصناعة متقنة</h3>
-                    <p class="text-gray-600 leading-relaxed text-sm max-w-xs">
+                    <h3 class="text-xl font-serif font-bold text-brand-black mb-1.5">جودة وصناعة متقنة</h3>
+                    <p class="text-gray-600 leading-relaxed text-xs max-w-xs">
                         تم اختيار خاماته بعناية فائقة لضمان المتانة والشكل الأنيق الذي يدوم معك طويلاً دون تغير.
                     </p>
                 </div>
 
                 <!-- CARD 3 -->
-                <div class="p-8 bg-white border grid-border flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 reveal">
-                    <div class="w-16 h-16 bg-brand-black text-white flex items-center justify-center mb-6 shadow-md">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                <div class="p-6 bg-white border grid-border rounded-2xl flex flex-col items-center text-center hover:border-brand-black transition-all duration-300 reveal">
+                    <div class="w-12 h-12 bg-brand-black text-white flex items-center justify-center mb-4 rounded-xl shadow-sm">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-serif font-bold text-brand-black mb-2">ضمان الرضا 100%</h3>
-                    <p class="text-gray-600 leading-relaxed text-sm max-w-xs">
+                    <h3 class="text-xl font-serif font-bold text-brand-black mb-1.5">ضمان الرضا 100%</h3>
+                    <p class="text-gray-600 leading-relaxed text-xs max-w-xs">
                         مطابقة تامة للمنتج المعروض بالصور، مع خدمة استبدال بسيطة وسلسة لضمان أقصى أريحيّة لك.
                     </p>
                 </div>
@@ -408,61 +413,61 @@
     </section>
 
     <!-- PHILOSOPHY SECTION -->
-    <section id="philosophy" class="border-b grid-border bg-brand-white py-16 sm:py-24">
-        <div class="max-w-[1600px] mx-auto flex flex-col lg:flex-row px-6">
+    <section id="philosophy" class="border-b grid-border bg-brand-white py-12 sm:py-16">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row px-4 sm:px-6">
             
             <!-- FIXED HEADING (RIGHT) -->
-            <div class="w-full lg:w-1/3 mb-12 lg:mb-0 lg:pr-8 border-b lg:border-b-0 lg:border-l grid-border pb-8 lg:pb-0">
-                <div class="sticky top-28 reveal">
-                    <span class="text-xs font-extrabold tracking-[0.25em] uppercase text-brand-accent mb-4 block">رؤية الفخامة</span>
-                    <h2 class="text-3xl sm:text-5xl font-serif font-black leading-tight mb-6 text-brand-black">صُنع ليترك<br>انطباعاً استثنائياً.</h2>
-                    <p class="text-base text-gray-600 leading-relaxed mb-6">
+            <div class="w-full lg:w-1/3 mb-8 lg:mb-0 lg:pr-6 border-b lg:border-b-0 lg:border-l grid-border pb-6 lg:pb-0">
+                <div class="sticky top-24 reveal">
+                    <span class="text-[11px] font-extrabold tracking-widest uppercase text-brand-accent mb-2 block">رؤية الفخامة</span>
+                    <h2 class="text-2xl sm:text-4xl font-serif font-black leading-tight mb-4 text-brand-black">صُنع ليترك<br>انطباعاً استثنائياً.</h2>
+                    <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-5">
                         عدنا إلى خط البداية لنعيد تعريف الحذاء اليومي الفاخر. النتيجة هي تحفة تدمج بساطة التصميم مع أقصى مستويات الهندسة المريحة.
                     </p>
-                    <a href="#order" class="inline-flex items-center gap-2 text-brand-black font-bold text-sm hover:text-brand-accent transition-colors">
+                    <a href="#order" class="inline-flex items-center gap-2 text-brand-black font-bold text-xs hover:text-brand-accent transition-colors border-b-2 border-brand-black pb-1">
                         <span>اختر مقاسك الآن</span>
-                        <svg class="w-4 h-4 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        <svg class="w-3.5 h-3.5 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
                 </div>
             </div>
 
             <!-- FEATURE BLOCKS (LEFT) -->
-            <div class="w-full lg:w-2/3 flex flex-col space-y-8 lg:pr-12">
+            <div class="w-full lg:w-2/3 flex flex-col space-y-5 lg:pr-8">
                 
                 <!-- FEATURE 1 -->
-                <div class="p-8 sm:p-10 rounded-2xl border grid-border bg-white hover:shadow-xl transition-all duration-300 reveal flex flex-col sm:flex-row items-start gap-6">
-                    <div class="w-14 h-14 rounded-xl bg-brand-black text-white flex items-center justify-center shrink-0 font-bold text-xl">
+                <div class="p-6 sm:p-7 border grid-border bg-white rounded-2xl hover:border-brand-black transition-all duration-300 reveal flex flex-col sm:flex-row items-start gap-5">
+                    <div class="w-11 h-11 bg-brand-black text-white flex items-center justify-center shrink-0 font-bold text-base rounded-xl">
                         01
                     </div>
                     <div>
-                        <h3 class="text-2xl font-serif font-bold text-brand-black mb-3">تناغم وهندسة الألوان</h3>
-                        <p class="text-gray-600 leading-relaxed text-base">
+                        <h3 class="text-lg font-serif font-bold text-brand-black mb-2">تناغم وهندسة الألوان</h3>
+                        <p class="text-gray-600 leading-relaxed text-xs">
                             دقة متناهية في اختيار الدرجات اللونية المحايدة ليمنحك هذا الحذاء سهولة مطلقة في تنسيقه مع مختلف أنماط الملابس، سواء الكاجوال أو شبه الرسمية.
                         </p>
                     </div>
                 </div>
 
                 <!-- FEATURE 2 -->
-                <div class="p-8 sm:p-10 border grid-border bg-white hover:shadow-xl transition-all duration-300 reveal flex flex-col sm:flex-row items-start gap-6">
-                    <div class="w-14 h-14 bg-brand-black text-white flex items-center justify-center shrink-0 font-bold text-xl">
+                <div class="p-6 sm:p-7 border grid-border bg-white rounded-2xl hover:border-brand-black transition-all duration-300 reveal flex flex-col sm:flex-row items-start gap-5">
+                    <div class="w-11 h-11 bg-brand-black text-white flex items-center justify-center shrink-0 font-bold text-base rounded-xl">
                         02
                     </div>
                     <div>
-                        <h3 class="text-2xl font-serif font-bold text-brand-black mb-3">راحة ومشي خفيف طول اليوم</h3>
-                        <p class="text-gray-600 leading-relaxed text-base">
+                        <h3 class="text-lg font-serif font-bold text-brand-black mb-2">راحة ومشي خفيف طول اليوم</h3>
+                        <p class="text-gray-600 leading-relaxed text-xs">
                             مزود ببطانة مريحة تضمن تهوية قدميك ومنع التعرق، بالإضافة لنعل مرن يمتص الصدمات ويقلل الإجهاد أثناء الوقوف والمشي لفترات طويلة.
                         </p>
                     </div>
                 </div>
 
                 <!-- FEATURE 3 -->
-                <div class="p-8 sm:p-10 border grid-border bg-white hover:shadow-xl transition-all duration-300 reveal flex flex-col sm:flex-row items-start gap-6">
-                    <div class="w-14 h-14 bg-brand-black text-white flex items-center justify-center shrink-0 font-bold text-xl">
+                <div class="p-6 sm:p-7 border grid-border bg-white rounded-2xl hover:border-brand-black transition-all duration-300 reveal flex flex-col sm:flex-row items-start gap-5">
+                    <div class="w-11 h-11 bg-brand-black text-white flex items-center justify-center shrink-0 font-bold text-base rounded-xl">
                         03
                     </div>
                     <div>
-                        <h3 class="text-2xl font-serif font-bold text-brand-black mb-3">خياطة متينة ومواد معمرة</h3>
-                        <p class="text-gray-600 leading-relaxed text-base">
+                        <h3 class="text-lg font-serif font-bold text-brand-black mb-2">خياطة متينة ومواد معمرة</h3>
+                        <p class="text-gray-600 leading-relaxed text-xs">
                             كل حافة وغرزة تم تنفيذها بإحكام فائق ليتحمل الاستخدام اليومي المكثف مع الحفاظ على مظهره الأصلي الأنيق طوال الوقت.
                         </p>
                     </div>
@@ -474,64 +479,64 @@
     </section>
 
     <!-- GALLERY DETAILS SECTION -->
-    <section id="details" class="border-b grid-border bg-brand-white py-16 sm:py-24">
-        <div class="max-w-[1600px] mx-auto px-4 sm:px-8">
+    <section id="details" class="border-b grid-border bg-brand-white py-12 sm:py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
             
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 reveal">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 reveal">
                 <div>
-                    <span class="text-xs font-bold tracking-[0.25em] uppercase text-brand-accent mb-2 block">معرض التفاصيل</span>
-                    <h2 class="text-3xl sm:text-5xl font-serif font-bold text-brand-black">دقة التصنيع في كل زاوية</h2>
+                    <span class="text-[11px] font-bold tracking-widest uppercase text-brand-accent mb-1 block">معرض التفاصيل</span>
+                    <h2 class="text-2xl sm:text-4xl font-serif font-bold text-brand-black">دقة التصنيع في كل زاوية</h2>
                 </div>
-                <p class="text-gray-500 text-sm max-w-md mt-4 md:mt-0">
+                <p class="text-gray-500 text-xs max-w-sm mt-3 md:mt-0">
                     اضغط على أي صورة لاستعراضها بوضوح كامل وللتحقق من جودة التفاصيل والخامات.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
                 
                 <!-- FEATURED IMAGE 1 -->
-                <div class="lg:col-span-5 bg-white p-6 sm:p-10 border grid-border image-hover-zoom cursor-pointer reveal group shadow-sm hover:shadow-xl transition-all" onclick="openLightbox('img_2.jpg', 'تفاصيل الخامات والجودة')">
-                    <div class="relative overflow-hidden">
-                        <img src="img_2.jpg" alt="CauseOf Shoe Details" class="w-full h-[420px] object-contain mx-auto">
-                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-sm font-bold gap-2">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                <div class="lg:col-span-5 bg-white p-5 border grid-border rounded-2xl image-hover-zoom cursor-pointer reveal group hover:border-brand-black transition-all" onclick="openLightbox('img_2.jpg', 'تفاصيل الخامات والجودة')">
+                    <div class="relative overflow-hidden rounded-xl">
+                        <img src="img_2.jpg" alt="CauseOf Shoe Details" class="w-full h-[340px] object-contain mx-auto">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-1.5 rounded-xl">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
                             <span>انقر للتكبير</span>
                         </div>
                     </div>
-                    <div class="mt-6 flex justify-between items-center pt-4 border-t grid-border">
-                        <span class="font-bold text-brand-black text-lg font-serif">خامات استثنائية ونعل مريح</span>
-                        <span class="text-xs text-brand-accent font-bold">معاينة 01</span>
+                    <div class="mt-4 flex justify-between items-center pt-3 border-t grid-border">
+                        <span class="font-bold text-brand-black text-sm font-serif">خامات استثنائية ونعل مريح</span>
+                        <span class="text-[10px] text-brand-accent font-bold">معاينة 01</span>
                     </div>
                 </div>
 
                 <!-- GALLERY GRID (3 IMAGES) -->
-                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 reveal">
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 reveal">
                     
-                    <div class="bg-white p-4 border grid-border image-hover-zoom cursor-pointer group shadow-sm hover:shadow-xl transition-all" onclick="openLightbox('img_4.jpg', 'صورة رقم 4')">
-                        <div class="relative overflow-hidden">
-                            <img src="img_4.jpg" alt="CauseOf Shoe View 4" class="w-full h-56 object-cover">
-                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-1.5">
+                    <div class="bg-white p-3 border grid-border rounded-2xl image-hover-zoom cursor-pointer group hover:border-brand-black transition-all" onclick="openLightbox('img_4.jpg', 'صورة رقم 4')">
+                        <div class="relative overflow-hidden rounded-xl">
+                            <img src="img_4.jpg" alt="CauseOf Shoe View 4" class="w-full h-44 object-cover">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-1 rounded-xl">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
                                 انقر للبدء
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white p-4 border grid-border image-hover-zoom cursor-pointer group shadow-sm hover:shadow-xl transition-all" onclick="openLightbox('img_5.jpg', 'صورة رقم 5')">
-                        <div class="relative overflow-hidden">
-                            <img src="img_5.jpg" alt="CauseOf Shoe View 5" class="w-full h-56 object-cover">
-                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-1.5">
+                    <div class="bg-white p-3 border grid-border rounded-2xl image-hover-zoom cursor-pointer group hover:border-brand-black transition-all" onclick="openLightbox('img_5.jpg', 'صورة رقم 5')">
+                        <div class="relative overflow-hidden rounded-xl">
+                            <img src="img_5.jpg" alt="CauseOf Shoe View 5" class="w-full h-44 object-cover">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-1 rounded-xl">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
                                 انقر للبدء
                             </div>
                         </div>
                     </div>
 
-                    <div class="sm:col-span-2 bg-white p-4 border grid-border image-hover-zoom cursor-pointer group shadow-sm hover:shadow-xl transition-all" onclick="openLightbox('img_6.jpeg', 'صورة كاملة للموديل')">
-                        <div class="relative overflow-hidden">
-                            <img src="img_6.jpeg" alt="CauseOf Shoe View 6" class="w-full h-72 object-cover">
-                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-sm font-bold gap-2">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                    <div class="sm:col-span-2 bg-white p-3 border grid-border rounded-2xl image-hover-zoom cursor-pointer group hover:border-brand-black transition-all" onclick="openLightbox('img_6.jpeg', 'صورة كاملة للموديل')">
+                        <div class="relative overflow-hidden rounded-xl">
+                            <img src="img_6.jpeg" alt="CauseOf Shoe View 6" class="w-full h-56 object-cover">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-1.5 rounded-xl">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
                                 <span>تكبير النظرة الشاملة للحذاء</span>
                             </div>
                         </div>
@@ -544,88 +549,88 @@
     </section>
 
     <!-- REVIEWS SECTION -->
-    <section id="reviews" class="border-b grid-border bg-white py-16 sm:py-24">
-        <div class="max-w-[1600px] mx-auto px-4 sm:px-8">
+    <section id="reviews" class="border-b grid-border bg-white py-12 sm:py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
             
-            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-                <span class="text-xs font-bold tracking-[0.25em] uppercase text-brand-accent mb-3 block">ثقة وتجارب حقيقية</span>
-                <h2 class="text-3xl sm:text-5xl font-serif font-black text-brand-black mb-4">ماذا يقول عملاؤنا؟</h2>
-                <p class="text-gray-600 text-sm sm:text-base">تجارب موثوقة من عملاء جربوا الحذاء واستمتعوا براحته وأناقته الفريدة.</p>
+            <div class="text-center max-w-xl mx-auto mb-10 reveal">
+                <span class="text-[11px] font-bold tracking-widest uppercase text-brand-accent mb-2 block">ثقة وتجارب حقيقية</span>
+                <h2 class="text-2xl sm:text-4xl font-serif font-black text-brand-black mb-3">ماذا يقول عملاؤنا؟</h2>
+                <p class="text-gray-600 text-xs sm:text-sm">تجارب موثوقة من عملاء جربوا الحذاء واستمتعوا براحته وأناقته الفريدة.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
                 <!-- REVIEW 1 -->
-                <div class="p-8 bg-white border grid-border shadow-sm hover:shadow-md transition-shadow reveal flex flex-col justify-between">
+                <div class="p-6 bg-white border grid-border rounded-2xl hover:border-brand-black transition-colors reveal flex flex-col justify-between">
                     <div>
-                        <div class="flex justify-between items-center mb-6">
-                            <div class="flex text-amber-400 text-base">★★★★★</div>
-                            <span class="flex items-center gap-1 text-xs bg-emerald-100 text-emerald-800 px-2.5 py-1 rounded-full font-bold">
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="flex text-amber-400 text-xs">★★★★★</div>
+                            <span class="flex items-center gap-1 text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-md font-bold">
                                 زبون موثق
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                             </span>
                         </div>
-                        <p class="text-gray-700 font-serif text-lg leading-relaxed mb-6">
+                        <p class="text-gray-700 font-serif text-sm leading-relaxed mb-4">
                             "السبرديلة ممتازة جداً والمظهر أنيق بحال الصور تماماً. خفيفة ورائعة فالمشي الطويل، جربتها نهار كامل ومحسيتش بالعياء."
                         </p>
                     </div>
-                    <div class="flex items-center gap-4 pt-4 border-t grid-border">
-                        <div class="w-11 h-11 rounded-full bg-brand-black text-white font-bold flex items-center justify-center">
+                    <div class="flex items-center gap-3 pt-3 border-t grid-border">
+                        <div class="w-9 h-9 bg-brand-black text-white font-bold flex items-center justify-center rounded-full text-xs shrink-0">
                             ي.م
                         </div>
                         <div>
-                            <p class="font-bold text-sm text-brand-black">ياسين . م</p>
-                            <p class="text-xs text-gray-400">الدار البيضاء</p>
+                            <p class="font-bold text-xs text-brand-black">ياسين . م</p>
+                            <p class="text-[10px] text-gray-400">الدار البيضاء</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- REVIEW 2 -->
-                <div class="p-8 bg-white border grid-border shadow-sm hover:shadow-md transition-shadow reveal flex flex-col justify-between" style="transition-delay: 0.1s;">
+                <div class="p-6 bg-white border grid-border rounded-2xl hover:border-brand-black transition-colors reveal flex flex-col justify-between" style="transition-delay: 0.1s;">
                     <div>
-                        <div class="flex justify-between items-center mb-6">
-                            <div class="flex text-amber-400 text-base">★★★★★</div>
-                            <span class="flex items-center gap-1 text-xs bg-emerald-100 text-emerald-800 px-2.5 py-1 font-bold">
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="flex text-amber-400 text-xs">★★★★★</div>
+                            <span class="flex items-center gap-1 text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-md font-bold">
                                 زبون موثق
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                             </span>
                         </div>
-                        <p class="text-gray-700 font-serif text-lg leading-relaxed mb-6">
+                        <p class="text-gray-700 font-serif text-sm leading-relaxed mb-4">
                             "جودة الخياطة والثوب عالية والقياس جاء مضبوط. الأهم هو الراحة لي كتوفرها فالساق. التوصيل كان سريع والتعامل احترافي."
                         </p>
                     </div>
-                    <div class="flex items-center gap-4 pt-4 border-t grid-border">
-                        <div class="w-11 h-11 bg-brand-black text-white font-bold flex items-center justify-center">
+                    <div class="flex items-center gap-3 pt-3 border-t grid-border">
+                        <div class="w-9 h-9 bg-brand-black text-white font-bold flex items-center justify-center rounded-full text-xs shrink-0">
                             م.ك
                         </div>
                         <div>
-                            <p class="font-bold text-sm text-brand-black">معاد . ك</p>
-                            <p class="text-xs text-gray-400">الرباط</p>
+                            <p class="font-bold text-xs text-brand-black">معاد . ك</p>
+                            <p class="text-[10px] text-gray-400">الرباط</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- REVIEW 3 -->
-                <div class="p-8 bg-white border grid-border shadow-sm hover:shadow-md transition-shadow reveal flex flex-col justify-between" style="transition-delay: 0.2s;">
+                <div class="p-6 bg-white border grid-border rounded-2xl hover:border-brand-black transition-colors reveal flex flex-col justify-between" style="transition-delay: 0.2s;">
                     <div>
-                        <div class="flex justify-between items-center mb-6">
-                            <div class="flex text-amber-400 text-base">★★★★★</div>
-                            <span class="flex items-center gap-1 text-xs bg-emerald-100 text-emerald-800 px-2.5 py-1 font-bold">
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="flex text-amber-400 text-xs">★★★★★</div>
+                            <span class="flex items-center gap-1 text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-md font-bold">
                                 زبون موثق
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                             </span>
                         </div>
-                        <p class="text-gray-700 font-serif text-lg leading-relaxed mb-6">
+                        <p class="text-gray-700 font-serif text-sm leading-relaxed mb-4">
                             "ألوان هادئة ومتناسقة مع السراول كاملين. استحق التجربة والثمن مناسب جداً مقارنة بالجودة الممتازة لي توصلت بيها."
                         </p>
                     </div>
-                    <div class="flex items-center gap-4 pt-4 border-t grid-border">
-                        <div class="w-11 h-11 bg-brand-black text-white font-bold flex items-center justify-center">
+                    <div class="flex items-center gap-3 pt-3 border-t grid-border">
+                        <div class="w-9 h-9 bg-brand-black text-white font-bold flex items-center justify-center rounded-full text-xs shrink-0">
                             أ.ب
                         </div>
                         <div>
-                            <p class="font-bold text-sm text-brand-black">أيوب . ب</p>
-                            <p class="text-xs text-gray-400">طنجة</p>
+                            <p class="font-bold text-xs text-brand-black">أيوب . ب</p>
+                            <p class="text-[10px] text-gray-400">طنجة</p>
                         </div>
                     </div>
                 </div>
@@ -635,45 +640,45 @@
     </section>
 
     <!-- FAQ SECTION -->
-    <section id="faq" class="border-b grid-border bg-white py-16 sm:py-24">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <section id="faq" class="border-b grid-border bg-white py-12 sm:py-16">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
             
-            <div class="text-center mb-12 reveal">
-                <span class="text-xs font-bold tracking-[0.25em] uppercase text-brand-accent mb-2 block">توضيحات مهمة</span>
-                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-black">الأسئلة الشائعة</h2>
+            <div class="text-center mb-8 reveal">
+                <span class="text-[11px] font-bold tracking-widest uppercase text-brand-accent mb-1 block">توضيحات مهمة</span>
+                <h2 class="text-2xl sm:text-3xl font-serif font-bold text-brand-black">الأسئلة الشائعة</h2>
             </div>
 
-            <div class="space-y-4">
+            <div class="space-y-3">
                 
                 <!-- FAQ 1 -->
-                <div class="border grid-border p-6 bg-white reveal cursor-pointer" onclick="toggleFaq(this)">
-                    <div class="flex justify-between items-center font-bold text-lg font-serif text-brand-black">
+                <div class="border grid-border p-5 bg-white rounded-2xl reveal cursor-pointer hover:border-brand-black transition-colors" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center font-bold text-base font-serif text-brand-black">
                         <span>كيف تتم عملية الشراء والتوصيل؟</span>
-                        <span class="faq-icon text-xl font-mono">+</span>
+                        <span class="faq-icon text-lg font-mono">+</span>
                     </div>
-                    <div class="faq-answer hidden mt-4 text-gray-600 leading-relaxed text-sm pt-4 border-t grid-border">
+                    <div class="faq-answer hidden mt-3 text-gray-600 leading-relaxed text-xs pt-3 border-t grid-border">
                         بعد ملء استمارة الطلب بأعلى الصفحة، يتصل بك أحد موظفينا لتأكيد العنوان والمقاس. يتم تجهيز طلبك وإرساله عبر الشحن السريع ليطرق بابك خلال 24 إلى 48 ساعة.
                     </div>
                 </div>
 
                 <!-- FAQ 2 -->
-                <div class="border grid-border p-6 bg-white reveal cursor-pointer" onclick="toggleFaq(this)">
-                    <div class="flex justify-between items-center font-bold text-lg font-serif text-brand-black">
+                <div class="border grid-border p-5 bg-white rounded-2xl reveal cursor-pointer hover:border-brand-black transition-colors" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center font-bold text-base font-serif text-brand-black">
                         <span>هل يمكنني معاينة المنتج قبل الدفع؟</span>
-                        <span class="faq-icon text-xl font-mono">+</span>
+                        <span class="faq-icon text-lg font-mono">+</span>
                     </div>
-                    <div class="faq-answer hidden mt-4 text-gray-600 leading-relaxed text-sm pt-4 border-t grid-border">
+                    <div class="faq-answer hidden mt-3 text-gray-600 leading-relaxed text-xs pt-3 border-t grid-border">
                         نعم بالتأكيد! نحرص في CauseOf على تقديم تجربة تسوق آمنة 100%. يمكنك فتح الطرد، معاينة الحذاء والتحقق من جودته ومطابقته للصور قبل تسليم المبلغ لمندوب التوصيل.
                     </div>
                 </div>
 
                 <!-- FAQ 3 -->
-                <div class="border grid-border p-6 bg-white reveal cursor-pointer" onclick="toggleFaq(this)">
-                    <div class="flex justify-between items-center font-bold text-lg font-serif text-brand-black">
+                <div class="border grid-border p-5 bg-white rounded-2xl reveal cursor-pointer hover:border-brand-black transition-colors" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center font-bold text-base font-serif text-brand-black">
                         <span>ماذا أعمل إذا كان المقاس غير مناسب؟</span>
-                        <span class="faq-icon text-xl font-mono">+</span>
+                        <span class="faq-icon text-lg font-mono">+</span>
                     </div>
-                    <div class="faq-answer hidden mt-4 text-gray-600 leading-relaxed text-sm pt-4 border-t grid-border">
+                    <div class="faq-answer hidden mt-3 text-gray-600 leading-relaxed text-xs pt-3 border-t grid-border">
                         نوفر خدمة استبدال المقاس بكل يسر وسهولة. كل ما عليك هو التواصل معنا مباشرة عبر الرقم الخاص بخدمة العملاء وسيتم استبدال المقاس لك مجاناً.
                     </div>
                 </div>
@@ -684,29 +689,29 @@
     </section>
 
     <!-- ORDER FORM SECTION -->
-    <section id="order" class="bg-white py-16 sm:py-24 border-b grid-border">
-        <div class="max-w-[1600px] mx-auto px-4 sm:px-8">
+    <section id="order" class="bg-white py-12 sm:py-16 border-b grid-border">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
             
-            <div class="max-w-5xl mx-auto bg-white border grid-border shadow-2xl overflow-hidden flex flex-col lg:flex-row reveal">
+            <div class="max-w-4xl mx-auto bg-white border-2 border-brand-black rounded-3xl shadow-xl overflow-hidden flex flex-col lg:flex-row reveal">
                 
                 <!-- PRODUCT PREVIEW SIDEBAR (RIGHT) -->
-                <div class="w-full lg:w-5/12 bg-brand-black text-white p-8 sm:p-12 flex flex-col justify-between relative overflow-hidden">
+                <div class="w-full lg:w-5/12 bg-brand-black text-white p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden">
                     <div>
-                        <div class="flex justify-between items-center mb-8">
-                            <span class="text-xs uppercase font-extrabold tracking-[0.2em] text-brand-accent">ملخص الطلب</span>
-                            <span class="bg-emerald-500/20 text-emerald-400 text-xs px-3 py-1 font-bold">متوفر حالياً</span>
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-[10px] uppercase font-extrabold tracking-widest text-brand-accent">ملخص الطلب</span>
+                            <span class="bg-emerald-500/20 text-emerald-400 text-[10px] px-2.5 py-1 rounded-full font-bold">متوفر حالياً</span>
                         </div>
 
-                        <h3 class="text-3xl font-serif font-black mb-2">CauseOf Edition 2026</h3>
-                        <p class="text-gray-400 text-xs mb-8">حذاء أنيق ومريح مخصص للاستخدام اليومي</p>
+                        <h3 class="text-2xl font-serif font-black mb-1">CauseOf Edition 2026</h3>
+                        <p class="text-gray-400 text-[11px] mb-6">حذاء أنيق ومريح مخصص للاستخدام اليومي</p>
 
-                        <!-- Product Image -->
-                        <div class="bg-white/5 p-6 mb-8 border border-white/10 text-center">
-                            <img src="img_1.png" alt="CauseOf Shoe" class="w-full max-w-[240px] mx-auto object-contain filter drop-shadow-xl hover:scale-105 transition-transform duration-300">
+                        <!-- Product Image Container -->
+                        <div class="bg-white/5 p-4 mb-6 border border-white/10 rounded-2xl text-center">
+                            <img src="img_1.png" alt="CauseOf Shoe" class="w-full max-w-[200px] mx-auto object-contain filter drop-shadow-lg hover:scale-105 transition-transform duration-300">
                         </div>
 
                         <!-- Pricing Breakdown -->
-                        <div class="space-y-3 text-sm text-gray-300 border-t border-white/10 pt-6">
+                        <div class="space-y-2.5 text-xs text-gray-300 border-t border-white/10 pt-4">
                             <div class="flex justify-between">
                                 <span>سعر الحذاء:</span>
                                 <span class="font-bold text-white">399 درهم</span>
@@ -715,58 +720,58 @@
                                 <span>الشحن والدفع:</span>
                                 <span class="text-emerald-400 font-bold">مجاني 100%</span>
                             </div>
-                            <div class="flex justify-between text-lg pt-3 border-t border-white/10 text-white font-bold font-serif">
+                            <div class="flex justify-between text-base pt-2.5 border-t border-white/10 text-white font-bold font-serif">
                                 <span>المجموع الكلي:</span>
-                                <span class="text-brand-accent text-2xl" id="summaryTotal">399 درهم</span>
+                                <span class="text-brand-accent text-xl" id="summaryTotal">399 درهم</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="mt-8 pt-6 border-t border-white/10 text-xs text-gray-400 flex items-center gap-2">
-                        <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    <div class="mt-6 pt-4 border-t border-white/10 text-[11px] text-gray-400 flex items-center gap-2">
+                        <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                         <span>شراء آمن مع إمكانية المعاينة والاستبدال</span>
                     </div>
                 </div>
 
                 <!-- ORDER FORM (LEFT) -->
-                <div class="w-full lg:w-7/12 p-8 sm:p-12 bg-white flex flex-col justify-center">
+                <div class="w-full lg:w-7/12 p-6 sm:p-8 bg-white flex flex-col justify-center">
                     
-                    <div class="mb-8">
-                        <span class="text-brand-accent text-xs font-bold tracking-[0.2em] uppercase mb-1 block">تأكيد مباشر</span>
-                        <h2 class="text-3xl font-serif font-black text-brand-black">أدخل معلومات التسليم</h2>
-                        <p class="text-gray-500 text-xs mt-1">الدفع نقدًا فور استلام حذائك</p>
+                    <div class="mb-6">
+                        <span class="text-brand-accent text-[10px] font-bold tracking-widest uppercase mb-0.5 block">تأكيد مباشر</span>
+                        <h2 class="text-2xl font-serif font-black text-brand-black">أدخل معلومات التسليم</h2>
+                        <p class="text-gray-500 text-[11px] mt-0.5">الدفع نقدًا فور استلام حذائك</p>
                     </div>
 
-                    <form id="orderForm" class="space-y-6">
+                    <form id="orderForm" class="space-y-4">
                         
                         <!-- Name Field -->
                         <div>
-                            <label for="name" class="block text-xs font-bold text-gray-700 uppercase mb-2">الاسم الكامل *</label>
+                            <label for="name" class="block text-[11px] font-bold text-gray-700 uppercase mb-1.5">الاسم الكامل *</label>
                             <input type="text" id="name" required class="modern-input" placeholder="مثال: محمد العلوي">
                         </div>
 
                         <!-- Phone Field -->
                         <div>
-                            <label for="phone" class="block text-xs font-bold text-gray-700 uppercase mb-2">رقم الهاتف *</label>
+                            <label for="phone" class="block text-[11px] font-bold text-gray-700 uppercase mb-1.5">رقم الهاتف *</label>
                             <input type="tel" id="phone" required dir="ltr" class="modern-input text-right" placeholder="0612345678">
                         </div>
 
                         <!-- City & Size -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
-                                <label for="city" class="block text-xs font-bold text-gray-700 uppercase mb-2">المدينة *</label>
+                                <label for="city" class="block text-[11px] font-bold text-gray-700 uppercase mb-1.5">المدينة *</label>
                                 <input type="text" id="city" required class="modern-input" placeholder="مثال: الدار البيضاء، الرباط...">
                             </div>
 
-                            <!-- VISUAL SIZE SELECTOR BUTTONS -->
+                            <!-- VISUAL SIZE SELECTOR BUTTONS - ROUNDED -->
                             <div>
-                                <label class="block text-xs font-bold text-gray-700 uppercase mb-2">اختر المقاس *</label>
-                                <div class="grid grid-cols-5 gap-2" id="sizeSelector">
-                                    <button type="button" class="size-btn py-3 text-center font-bold text-base" data-size="40">40</button>
-                                    <button type="button" class="size-btn py-3 text-center font-bold text-base selected" data-size="41">41</button>
-                                    <button type="button" class="size-btn py-3 text-center font-bold text-base" data-size="42">42</button>
-                                    <button type="button" class="size-btn py-3 text-center font-bold text-base" data-size="43">43</button>
-                                    <button type="button" class="size-btn py-3 text-center font-bold text-base" data-size="44">44</button>
+                                <label class="block text-[11px] font-bold text-gray-700 uppercase mb-1.5">اختر المقاس *</label>
+                                <div class="grid grid-cols-5 gap-1.5" id="sizeSelector">
+                                    <button type="button" class="size-btn py-2 text-center font-bold text-sm" data-size="40">40</button>
+                                    <button type="button" class="size-btn py-2 text-center font-bold text-sm selected" data-size="41">41</button>
+                                    <button type="button" class="size-btn py-2 text-center font-bold text-sm" data-size="42">42</button>
+                                    <button type="button" class="size-btn py-2 text-center font-bold text-sm" data-size="43">43</button>
+                                    <button type="button" class="size-btn py-2 text-center font-bold text-sm" data-size="44">44</button>
                                 </div>
                                 <input type="hidden" id="selectedSize" value="41">
                             </div>
@@ -774,24 +779,24 @@
 
                         <!-- QUANTITY SELECTOR -->
                         <div>
-                            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">الكمية</label>
-                            <div class="flex items-center gap-4 bg-gray-50 border border-gray-200 w-max p-1.5">
-                                <button type="button" id="decQty" class="w-10 h-10 bg-white border border-gray-200 text-xl font-bold flex items-center justify-center hover:bg-gray-100">-</button>
-                                <span id="qtyVal" class="font-bold text-lg font-serif px-3">1</span>
-                                <button type="button" id="incQty" class="w-10 h-10 bg-white border border-gray-200 text-xl font-bold flex items-center justify-center hover:bg-gray-100">+</button>
+                            <label class="block text-[11px] font-bold text-gray-700 uppercase mb-1.5">الكمية</label>
+                            <div class="flex items-center gap-3 bg-gray-50 border border-gray-200 w-max p-1 rounded-xl">
+                                <button type="button" id="decQty" class="w-8 h-8 bg-white border border-gray-200 text-lg font-bold flex items-center justify-center rounded-lg hover:bg-gray-100">-</button>
+                                <span id="qtyVal" class="font-bold text-base font-serif px-2">1</span>
+                                <button type="button" id="incQty" class="w-8 h-8 bg-white border border-gray-200 text-lg font-bold flex items-center justify-center rounded-lg hover:bg-gray-100">+</button>
                             </div>
                         </div>
 
                         <!-- Address Field -->
                         <div>
-                            <label for="address" class="block text-xs font-bold text-gray-700 uppercase mb-2">العنوان التفصيلي (اختياري)</label>
+                            <label for="address" class="block text-[11px] font-bold text-gray-700 uppercase mb-1.5">العنوان التفصيلي (اختياري)</label>
                             <input type="text" id="address" class="modern-input" placeholder="اسم الحي، المجمع السكني، أو الشارع...">
                         </div>
 
                         <!-- Submit Button -->
-                        <button type="submit" class="btn-luxury w-full py-5 text-lg font-black tracking-widest uppercase flex items-center justify-center gap-3 shadow-2xl">
+                        <button type="submit" class="btn-luxury w-full py-4 text-base font-black tracking-wider uppercase flex items-center justify-center gap-2.5 shadow-md rounded-xl mt-2">
                             <span>تأكيد إرسال الطلب الآن</span>
-                            <svg class="w-5 h-5 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            <svg class="w-4 h-4 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </button>
 
                     </form>
@@ -804,58 +809,58 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-brand-black text-white py-16 border-t border-white/10">
-        <div class="max-w-[1600px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-8">
+    <footer class="bg-brand-black text-white py-12 border-t border-white/10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="flex items-baseline gap-1">
-                <span class="font-serif font-black text-3xl tracking-tighter uppercase">CAUSE</span>
-                <span class="font-serif font-black text-3xl tracking-tighter uppercase text-brand-accent">OF</span>
+                <span class="font-serif font-black text-2xl tracking-tighter uppercase">CAUSE</span>
+                <span class="font-serif font-black text-2xl tracking-tighter uppercase text-brand-accent">OF</span>
             </div>
             
-            <div class="flex flex-wrap justify-center gap-8 text-xs uppercase tracking-widest text-gray-400 font-bold">
+            <div class="flex flex-wrap justify-center gap-6 text-[11px] uppercase tracking-wider text-gray-400 font-bold">
                 <a href="#philosophy" class="hover:text-white transition-colors">عن الماركة</a>
                 <a href="#details" class="hover:text-white transition-colors">المعرض</a>
                 <a href="#reviews" class="hover:text-white transition-colors">آراء الزبائن</a>
                 <a href="#faq" class="hover:text-white transition-colors">الأسئلة الشائعة</a>
             </div>
             
-            <p class="text-xs text-gray-500 font-sans tracking-widest uppercase">© 2026 CauseOf. جميع الحقوق محفوظة.</p>
+            <p class="text-[11px] text-gray-500 font-sans tracking-wider uppercase">© 2026 CauseOf. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
 
     <!-- STICKY MOBILE CTA BAR -->
-    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-200 p-3 px-4 z-40 flex items-center justify-between shadow-2xl border-t-0">
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-200 p-2.5 px-4 z-40 flex items-center justify-between shadow-lg rounded-t-2xl">
         <div>
-            <span class="text-[10px] text-gray-500 block">العرض الحصري</span>
-            <span class="text-xl font-black font-serif text-brand-black">399 درهم</span>
+            <span class="text-[9px] text-gray-500 block">العرض الحصري</span>
+            <span class="text-lg font-black font-serif text-brand-black">399 درهم</span>
         </div>
-        <a href="#order" class="btn-luxury px-6 py-3 text-sm font-bold tracking-wider uppercase flex items-center gap-2 shadow-lg">
+        <a href="#order" class="btn-luxury px-5 py-2.5 text-xs font-bold tracking-wider uppercase flex items-center gap-2 rounded-xl">
             <span>اطلب الآن</span>
-            <svg class="w-4 h-4 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            <svg class="w-3.5 h-3.5 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
         </a>
     </div>
 
     <!-- LIGHTBOX MODAL -->
     <div id="lightboxModal" class="fixed inset-0 modal-backdrop z-[100] hidden flex items-center justify-center p-4">
-        <div class="relative max-w-4xl w-full bg-white rounded-3xl p-6 overflow-hidden shadow-2xl flex flex-col items-center">
-            <button onclick="closeLightbox()" aria-label="Close Lightbox" class="absolute top-4 left-4 bg-gray-100 hover:bg-gray-200 text-brand-black p-2 rounded-full font-bold transition-colors">
+        <div class="relative max-w-3xl w-full bg-white border-2 border-brand-black p-5 rounded-3xl overflow-hidden shadow-2xl flex flex-col items-center">
+            <button onclick="closeLightbox()" aria-label="Close Lightbox" class="absolute top-3 left-3 bg-gray-100 hover:bg-gray-200 text-brand-black p-1.5 rounded-xl font-bold transition-colors border border-gray-300">
                 ✕
             </button>
-            <img id="lightboxImg" src="" alt="Zoomed view" class="w-full max-h-[75vh] object-contain rounded-xl mb-4">
-            <p id="lightboxCaption" class="text-base font-serif font-bold text-brand-black text-center"></p>
+            <img id="lightboxImg" src="" alt="Zoomed view" class="w-full max-h-[70vh] object-contain mb-3 rounded-xl">
+            <p id="lightboxCaption" class="text-sm font-serif font-bold text-brand-black text-center"></p>
         </div>
     </div>
 
     <!-- SUCCESS TOAST / MODAL -->
     <div id="successModal" class="fixed inset-0 modal-backdrop z-[100] hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center shadow-2xl border grid-border">
-            <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-4xl mx-auto mb-6">
-                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+        <div class="bg-white p-6 max-w-sm w-full text-center shadow-2xl border-2 border-brand-black rounded-3xl">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl mx-auto mb-4 rounded-full">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
             </div>
-            <h3 class="text-3xl font-serif font-black text-brand-black mb-3">تم تسجيل طلبك بنجاح!</h3>
-            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+            <h3 class="text-2xl font-serif font-black text-brand-black mb-2">تم تسجيل طلبك بنجاح!</h3>
+            <p class="text-gray-600 text-xs leading-relaxed mb-5">
                 شكرًا لثقتك بـ CauseOf. سيتصل بك أحد فريق خدمة العملاء خلال ساعات قليلة لتأكيد التفاصيل وتنسيق التوصيل.
             </p>
-            <button onclick="closeSuccessModal()" class="btn-luxury w-full py-3.5 text-base font-bold">
+            <button onclick="closeSuccessModal()" class="btn-luxury w-full py-3 text-sm font-bold rounded-xl">
                 حسناً، فهمت
             </button>
         </div>
