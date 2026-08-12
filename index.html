@@ -99,19 +99,31 @@
         .modern-input:focus {
             outline: none;
             background: #FFFFFF;
-            border-color: #1A2E50;
-            box-shadow: 0 0 0 3px rgba(26, 46, 80, 0.08);
+            border-color: #FF5A00;
+            box-shadow: 0 0 0 3px rgba(255, 90, 0, 0.1);
+        }
+        .modern-input::placeholder {
+            color: #B0B7C2;
+            font-weight: 300;
         }
 
         /* Custom Size Selector Pill - Soft Rounded Design */
         .size-btn {
-            border: 1px solid #E5E7EB;
+            border: 2px solid #E5E7EB;
             background: #FFFFFF;
             transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             border-radius: 0.75rem;
+            cursor: pointer;
+            font-weight: 600;
         }
         .size-btn:hover {
-            border-color: #1A2E50;
+            border-color: #FF5A00;
+            background: #FFF8F5;
+        }
+        .size-btn:focus {
+            outline: none;
+            border-color: #FF5A00;
+            box-shadow: 0 0 0 3px rgba(255, 90, 0, 0.1);
         }
         .size-btn.selected {
             background-color: #1A2E50;
@@ -130,27 +142,53 @@
             opacity: 1;
             transform: translateY(0);
         }
+        
+        /* Enhanced Focus States for Accessibility */
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid #FF5A00;
+            outline-offset: 2px;
+        }
+        
+        /* Smooth Scrolling Behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Button Loading State */
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
 
         /* Luxury Hover Zoom */
         .image-hover-zoom {
             overflow: hidden;
             position: relative;
             border-radius: 1.25rem;
+            cursor: pointer;
         }
         .image-hover-zoom img {
-            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .image-hover-zoom:hover img {
-            transform: scale(1.05);
+            transform: scale(1.04);
+        }
+        .image-hover-zoom:focus-within {
+            outline: 2px solid #FF5A00;
+            outline-offset: 2px;
         }
 
-        /* Glassmorphism Cards - Smooth Rounded Edges */
+        /* Clean Cards - Smooth Rounded Edges */
         .glass-card {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(229, 231, 235, 0.9);
+            background: #FFFFFF;
+            border: 1px solid #E5E7EB;
             border-radius: 1.25rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 3px rgba(26, 46, 80, 0.08);
+        }
+        .glass-card:hover {
+            box-shadow: 0 4px 12px rgba(26, 46, 80, 0.12);
+            border-color: #D1D5DB;
         }
 
         /* Primary Dynamic Button - Rounded Aesthetic */
@@ -159,9 +197,13 @@
             overflow: hidden;
             background-color: #1A2E50;
             color: #FFFFFF;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 1;
             border-radius: 0.875rem;
+            cursor: pointer;
+            border: none;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
         .btn-luxury::before {
             content: '';
@@ -173,7 +215,7 @@
             background-color: #FF5A00;
             transform: scaleX(0);
             transform-origin: right;
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
             z-index: -1;
         }
         .btn-luxury:hover::before {
@@ -182,12 +224,24 @@
         }
         .btn-luxury:hover {
             box-shadow: 0 8px 20px rgba(255, 90, 0, 0.28);
+            transform: translateY(-2px);
+        }
+        .btn-luxury:active {
+            transform: translateY(0px);
+        }
+        .btn-luxury:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 90, 0, 0.2);
+        }
+        .btn-luxury:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
         }
 
-        /* Modal backdrop Blur */
+        /* Modal backdrop - Clean Overlay */
         .modal-backdrop {
-            background-color: rgba(26, 46, 80, 0.75);
-            backdrop-filter: blur(8px);
+            background-color: rgba(26, 46, 80, 0.8);
+            transition: opacity 0.3s ease;
         }
     </style>
 </head>
@@ -208,7 +262,7 @@
     </div>
 
     <!-- MAIN NAVBAR -->
-    <nav class="bg-brand-white/95 backdrop-blur-md sticky top-0 z-50 border-b grid-border transition-all duration-300" id="navbar">
+    <nav class="bg-white sticky top-0 z-50 border-b grid-border transition-all duration-300 shadow-sm" id="navbar">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="flex justify-between items-center h-16 sm:h-18">
                 
@@ -338,8 +392,8 @@
                 
                 <!-- Main Product Image with subtle Floating Animation -->
                 <div class="relative w-full max-w-sm my-6">
-                    <div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-4/5 h-5 bg-black/10 blur-lg rounded-full"></div>
-                    <img src="img_1.png" alt="CauseOf Premium Shoe" class="w-full object-contain animate-float relative z-10 filter drop-shadow-lg">
+                    <div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-4/5 h-5 bg-black opacity-5 rounded-full"></div>
+                    <img src="img_1.png" alt="CauseOf Premium Shoe" class="w-full object-contain animate-float relative z-10 filter drop-shadow-md hover:drop-shadow-lg transition-all duration-300">
                 </div>
 
                 <!-- RESPONSIVE GLASS CARDS OVERLAY - ROUNDED CORNERS -->
@@ -830,7 +884,7 @@
     </footer>
 
     <!-- STICKY MOBILE CTA BAR -->
-    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-200 p-2.5 px-4 z-40 flex items-center justify-between shadow-lg rounded-t-2xl">
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-2.5 px-4 z-40 flex items-center justify-between shadow-lg rounded-t-2xl">
         <div>
             <span class="text-[9px] text-gray-500 block">العرض الحصري</span>
             <span class="text-lg font-black font-serif text-brand-black">399 درهم</span>
